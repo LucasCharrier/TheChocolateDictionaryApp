@@ -23,6 +23,19 @@
 		652DAC4418A1CA0700287F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC2018A1CA0700287F15 /* UIKit.framework */; };
 		652DAC4C18A1CA0700287F15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 652DAC4A18A1CA0700287F15 /* InfoPlist.strings */; };
 		652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652DAC4D18A1CA0700287F15 /* CrowdDictionaryTests.m */; };
+		6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */; };
+		6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */; };
+		65E14D5818A29AF900E10F33 /* glyphicons_003_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */; };
+		65E14D5918A29AF900E10F33 /* glyphicons_027_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5018A29AF900E10F33 /* glyphicons_027_search.png */; };
+		65E14D5A18A29AF900E10F33 /* glyphicons_030_pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5118A29AF900E10F33 /* glyphicons_030_pencil.png */; };
+		65E14D5B18A29AF900E10F33 /* glyphicons_048_dislikes - copie.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5218A29AF900E10F33 /* glyphicons_048_dislikes - copie.png */; };
+		65E14D5C18A29AF900E10F33 /* glyphicons_049_star - copie.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5318A29AF900E10F33 /* glyphicons_049_star - copie.png */; };
+		65E14D5D18A29AF900E10F33 /* glyphicons_051_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5418A29AF900E10F33 /* glyphicons_051_eye_open.png */; };
+		65E14D5E18A29AF900E10F33 /* glyphicons_065_tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5518A29AF900E10F33 /* glyphicons_065_tag.png */; };
+		65E14D5F18A29AF900E10F33 /* glyphicons_066_tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5618A29AF900E10F33 /* glyphicons_066_tags.png */; };
+		65E14D6018A29AF900E10F33 /* glyphicons_347_hand_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5718A29AF900E10F33 /* glyphicons_347_hand_up.png */; };
+		65E14D6218A29B7100E10F33 /* glyphicons_020_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D6118A29B7100E10F33 /* glyphicons_020_home.png */; };
+		65E14D6418A29CF200E10F33 /* glyphicons_083_random.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D6318A29CF200E10F33 /* glyphicons_083_random.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +71,19 @@
 		652DAC4918A1CA0700287F15 /* CrowdDictionaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrowdDictionaryTests-Info.plist"; sourceTree = "<group>"; };
 		652DAC4B18A1CA0700287F15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		652DAC4D18A1CA0700287F15 /* CrowdDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTests.m; sourceTree = "<group>"; };
+		6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPI.h; sourceTree = "<group>"; };
+		6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryWebAPI.m; sourceTree = "<group>"; };
+		65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_003_user.png; sourceTree = "<group>"; };
+		65E14D5018A29AF900E10F33 /* glyphicons_027_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_027_search.png; sourceTree = "<group>"; };
+		65E14D5118A29AF900E10F33 /* glyphicons_030_pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_030_pencil.png; sourceTree = "<group>"; };
+		65E14D5218A29AF900E10F33 /* glyphicons_048_dislikes - copie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_048_dislikes - copie.png"; sourceTree = "<group>"; };
+		65E14D5318A29AF900E10F33 /* glyphicons_049_star - copie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_049_star - copie.png"; sourceTree = "<group>"; };
+		65E14D5418A29AF900E10F33 /* glyphicons_051_eye_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_051_eye_open.png; sourceTree = "<group>"; };
+		65E14D5518A29AF900E10F33 /* glyphicons_065_tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_065_tag.png; sourceTree = "<group>"; };
+		65E14D5618A29AF900E10F33 /* glyphicons_066_tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_066_tags.png; sourceTree = "<group>"; };
+		65E14D5718A29AF900E10F33 /* glyphicons_347_hand_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_347_hand_up.png; sourceTree = "<group>"; };
+		65E14D6118A29B7100E10F33 /* glyphicons_020_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_020_home.png; sourceTree = "<group>"; };
+		65E14D6318A29CF200E10F33 /* glyphicons_083_random.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_083_random.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +143,7 @@
 		652DAC2218A1CA0700287F15 /* CrowdDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				65E14D4E18A29AF900E10F33 /* Icon */,
 				652DAC2B18A1CA0700287F15 /* CrowdDictionaryAppDelegate.h */,
 				652DAC2C18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m */,
 				652DAC2E18A1CA0700287F15 /* Main_iPhone.storyboard */,
@@ -125,6 +152,8 @@
 				652DAC3518A1CA0700287F15 /* CrowdDictionaryMasterViewController.m */,
 				652DAC3718A1CA0700287F15 /* CrowdDictionaryDetailViewController.h */,
 				652DAC3818A1CA0700287F15 /* CrowdDictionaryDetailViewController.m */,
+				6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */,
+				6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */,
 				652DAC3A18A1CA0700287F15 /* Images.xcassets */,
 				652DAC2318A1CA0700287F15 /* Supporting Files */,
 			);
@@ -158,6 +187,25 @@
 				652DAC4A18A1CA0700287F15 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65E14D4E18A29AF900E10F33 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				65E14D6318A29CF200E10F33 /* glyphicons_083_random.png */,
+				65E14D6118A29B7100E10F33 /* glyphicons_020_home.png */,
+				65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */,
+				65E14D5018A29AF900E10F33 /* glyphicons_027_search.png */,
+				65E14D5118A29AF900E10F33 /* glyphicons_030_pencil.png */,
+				65E14D5218A29AF900E10F33 /* glyphicons_048_dislikes - copie.png */,
+				65E14D5318A29AF900E10F33 /* glyphicons_049_star - copie.png */,
+				65E14D5418A29AF900E10F33 /* glyphicons_051_eye_open.png */,
+				65E14D5518A29AF900E10F33 /* glyphicons_065_tag.png */,
+				65E14D5618A29AF900E10F33 /* glyphicons_066_tags.png */,
+				65E14D5718A29AF900E10F33 /* glyphicons_347_hand_up.png */,
+			);
+			name = Icon;
+			path = CrowdDictionaryIcon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +285,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E14D5D18A29AF900E10F33 /* glyphicons_051_eye_open.png in Resources */,
 				652DAC3318A1CA0700287F15 /* Main_iPad.storyboard in Resources */,
 				652DAC3B18A1CA0700287F15 /* Images.xcassets in Resources */,
+				65E14D6218A29B7100E10F33 /* glyphicons_020_home.png in Resources */,
+				65E14D5F18A29AF900E10F33 /* glyphicons_066_tags.png in Resources */,
+				65E14D5A18A29AF900E10F33 /* glyphicons_030_pencil.png in Resources */,
+				65E14D6418A29CF200E10F33 /* glyphicons_083_random.png in Resources */,
 				652DAC3018A1CA0700287F15 /* Main_iPhone.storyboard in Resources */,
+				65E14D5818A29AF900E10F33 /* glyphicons_003_user.png in Resources */,
+				65E14D5B18A29AF900E10F33 /* glyphicons_048_dislikes - copie.png in Resources */,
+				65E14D6018A29AF900E10F33 /* glyphicons_347_hand_up.png in Resources */,
 				652DAC2718A1CA0700287F15 /* InfoPlist.strings in Resources */,
+				65E14D5918A29AF900E10F33 /* glyphicons_027_search.png in Resources */,
+				65E14D5C18A29AF900E10F33 /* glyphicons_049_star - copie.png in Resources */,
+				65E14D5E18A29AF900E10F33 /* glyphicons_065_tag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652DAC2D18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m in Sources */,
+				6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 				652DAC3618A1CA0700287F15 /* CrowdDictionaryMasterViewController.m in Sources */,
 				652DAC2918A1CA0700287F15 /* main.m in Sources */,
 				652DAC3918A1CA0700287F15 /* CrowdDictionaryDetailViewController.m in Sources */,
@@ -271,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */,
+				6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +542,7 @@
 				652DAC5318A1CA0700287F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		652DAC5418A1CA0700287F15 /* Build configuration list for PBXNativeTarget "CrowdDictionaryTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +551,7 @@
 				652DAC5618A1CA0700287F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
