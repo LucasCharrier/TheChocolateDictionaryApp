@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CrowdDictionaryWebAPI : NSObject
-
+@interface CrowdDictionaryWebAPI : NSObject <NSURLConnectionDelegate>
+{
+    NSURLConnection *currentConnection;
+}
+@property (retain, nonatomic) NSMutableData *apiReturnJSonData;
 @end
