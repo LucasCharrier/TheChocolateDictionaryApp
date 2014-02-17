@@ -8,11 +8,42 @@
 
 #import "CrowdDictionaryWebAPI.h"
 
-
-#define kStrikeIronUserID   @"yourstrikeironuserid@youremail.com"
-#define kStrikeIronPassword @"yourstrikeironpassword"
-
 @implementation CrowdDictionaryWebAPI
+
++ (NSDictionary *)executeCrowdDictionaryFetch:(NSString *)query
+{
+    query = [query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // NSLog(@"[%@ %@] sent %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), query);
+    NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:query] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    NSDictionary *results = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
+    if (error) NSLog(@"[%@ %@] JSON error: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), error.localizedDescription);
+    // NSLog(@"[%@ %@] received %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), results);
+    return results;
+}
+
++ (NSArray *)mostPopularDefinitions
+{
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions.json"];
+    return [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
+}
+
+
+
++ (NSArray *)photosInPlace:(NSDictionary *)user
+{
+    NSArray *definitions = nil;
+    NSString *userId = [user objectForKey:CROWD_DICTIONARY_USER_ID];
+    if (userId) {
+        NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/user/users/show/%@", userId];
+        NSString *userName = [user objectForKey:CROWD_DICTIONARY_USER];
+        definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
+        for (NSMutableDictionary *definition in definitions) {
+            [definition setObject:userName forKey:CROWD_DICTIONARY_USER];
+        }
+    }
+    return definitions;
+}
 
 
 /*
@@ -24,19 +55,19 @@
     {
         [currentConnection cancel];
         currentConnection = nil;
-        self.apiReturnJSonData = nil;
+        self.apiReturnJsonData = nil;
     }
 }
 
-- (IBAction) moreRecentDefinition{
+- (IBAction) mostRecentDefinition{
     
-    NSString *restCallString = [NSString stringWithFormat:@"http://ws.strikeiron.com/StrikeIron/EMV6Hygiene/VerifyEmail?LicenseInfo.RegisteredUser.UserID=%@;LicenseInfo.RegisteredUser.Password=%@;VerifyEmail.Email;VerifyEmail.Timeout=30", kStrikeIronUserID, kStrikeIronPassword ];
+    NSString *restCallString = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions.json"];
     NSURL *restURL = [NSURL URLWithString:restCallString];
     NSURLRequest *restRequest = [NSURLRequest requestWithURL:restURL];
     [self cancelConnection];
     currentConnection = [[NSURLConnection alloc] initWithRequest:restRequest delegate:self];
     // If the connection was successful, create the XML that will be returned.
-    self.apiReturnJSonData = [NSMutableData data];
+    self.apiReturnJsonData = [NSMutableData data];
 }
 
 /* 
@@ -44,7 +75,7 @@
  */
 
 - (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response {
-    [self.apiReturnJSonData setLength:0];
+    [self.apiReturnJsonData setLength:0];
 }
 
 
@@ -53,7 +84,7 @@
  */
 
 - (void)connection:(NSURLConnection*)connection didReceiveData:(NSData*)data {
-    [self.apiReturnJSonData appendData:data];
+    [self.apiReturnJsonData appendData:data];
 }
 
 /*

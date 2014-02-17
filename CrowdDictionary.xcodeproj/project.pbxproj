@@ -73,6 +73,7 @@
 		652DAC4D18A1CA0700287F15 /* CrowdDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTests.m; sourceTree = "<group>"; };
 		6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPI.h; sourceTree = "<group>"; };
 		6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryWebAPI.m; sourceTree = "<group>"; };
+		6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPIDelegate.h; sourceTree = "<group>"; };
 		65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_003_user.png; sourceTree = "<group>"; };
 		65E14D5018A29AF900E10F33 /* glyphicons_027_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_027_search.png; sourceTree = "<group>"; };
 		65E14D5118A29AF900E10F33 /* glyphicons_030_pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_030_pencil.png; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 				652DAC3818A1CA0700287F15 /* CrowdDictionaryDetailViewController.m */,
 				6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */,
 				6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */,
+				6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */,
 				652DAC3A18A1CA0700287F15 /* Images.xcassets */,
 				652DAC2318A1CA0700287F15 /* Supporting Files */,
 			);
