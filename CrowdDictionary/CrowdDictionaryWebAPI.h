@@ -29,8 +29,9 @@
 @property (strong, nonatomic) NSString *user_username;
 @property (strong, nonatomic) NSString *tags;
 + (NSArray *)mostPopularDefinitions;
-+ (NSArray *)definitionsForUsers:(int)userID;
-+ (NSArray *)definitionsForWord:(NSString *)word;
++ (NSArray *)mostRecentDefinitions;
++ (NSArray *)definitionsForUser:(NSString *)userID;
++ (NSArray *)definitionsForWord:(NSString *)wordID;
 
 @property (weak, nonatomic) id<CrowdDictionaryWebAPIDelegate> delegate;
 

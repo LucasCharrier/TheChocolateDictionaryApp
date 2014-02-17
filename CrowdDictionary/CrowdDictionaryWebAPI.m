@@ -30,17 +30,41 @@
 
 
 
-+ (NSArray *)photosInPlace:(NSDictionary *)user
++ (NSArray *)definitionsForUser:(NSString *)userID
 {
     NSArray *definitions = nil;
-    NSString *userId = [user objectForKey:CROWD_DICTIONARY_USER_ID];
-    if (userId) {
-        NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/user/users/show/%@", userId];
-        NSString *userName = [user objectForKey:CROWD_DICTIONARY_USER];
+    //NSString *userID = [userID objectForKey:CROWD_DICTIONARY_USER_ID];
+    if (userID) {
+        NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/user/users/show/%@", userID];
         definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
         for (NSMutableDictionary *definition in definitions) {
-            [definition setObject:userName forKey:CROWD_DICTIONARY_USER];
+            [definition setObject:userID forKey:CROWD_DICTIONARY_USER_ID];
         }
+    }
+    return definitions;
+}
+
++ (NSArray *)definitionsForWord:(NSString *)wordID
+{
+    NSArray *definitions = nil;
+    //NSString *wordID = [word objectForKey:CROWD_DICTIONARY_WORD_ID];
+    if (wordID) {
+        NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/words/show/%@", wordID];
+        definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
+        for (NSMutableDictionary *definition in definitions) {
+            [definition setObject:wordID forKey:CROWD_DICTIONARY_WORD_ID];
+        }
+    }
+    return definitions;
+}
+
++ (NSArray *)lastDefinitions
+{
+    NSArray *definitions = nil;
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/lastDefinitions"];
+    definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
+    for (NSMutableDictionary *definition in definitions) {
+        
     }
     return definitions;
 }
@@ -59,16 +83,6 @@
     }
 }
 
-- (IBAction) mostRecentDefinition{
-    
-    NSString *restCallString = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions.json"];
-    NSURL *restURL = [NSURL URLWithString:restCallString];
-    NSURLRequest *restRequest = [NSURLRequest requestWithURL:restURL];
-    [self cancelConnection];
-    currentConnection = [[NSURLConnection alloc] initWithRequest:restRequest delegate:self];
-    // If the connection was successful, create the XML that will be returned.
-    self.apiReturnJsonData = [NSMutableData data];
-}
 
 /* 
  didReceiveResponse is called when there is return data. It may be called multiple times for a connection and you should reset the data if it is

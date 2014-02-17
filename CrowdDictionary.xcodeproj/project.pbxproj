@@ -25,6 +25,8 @@
 		652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652DAC4D18A1CA0700287F15 /* CrowdDictionaryTests.m */; };
 		6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */; };
 		6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */; };
+		6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */; };
+		6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */; };
 		65E14D5818A29AF900E10F33 /* glyphicons_003_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */; };
 		65E14D5918A29AF900E10F33 /* glyphicons_027_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5018A29AF900E10F33 /* glyphicons_027_search.png */; };
 		65E14D5A18A29AF900E10F33 /* glyphicons_030_pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D5118A29AF900E10F33 /* glyphicons_030_pencil.png */; };
@@ -74,6 +76,8 @@
 		6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPI.h; sourceTree = "<group>"; };
 		6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryWebAPI.m; sourceTree = "<group>"; };
 		6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPIDelegate.h; sourceTree = "<group>"; };
+		6590CF0F18B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryRandomDefinition.h; sourceTree = "<group>"; };
+		6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryRandomDefinition.m; sourceTree = "<group>"; };
 		65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_003_user.png; sourceTree = "<group>"; };
 		65E14D5018A29AF900E10F33 /* glyphicons_027_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_027_search.png; sourceTree = "<group>"; };
 		65E14D5118A29AF900E10F33 /* glyphicons_030_pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_030_pencil.png; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */,
 				6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */,
 				6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */,
+				6590CF0F18B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.h */,
+				6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */,
 				652DAC3A18A1CA0700287F15 /* Images.xcassets */,
 				652DAC2318A1CA0700287F15 /* Supporting Files */,
 			);
@@ -323,6 +329,7 @@
 				652DAC2D18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m in Sources */,
 				6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 				652DAC3618A1CA0700287F15 /* CrowdDictionaryMasterViewController.m in Sources */,
+				6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC2918A1CA0700287F15 /* main.m in Sources */,
 				652DAC3918A1CA0700287F15 /* CrowdDictionaryDetailViewController.m in Sources */,
 			);
@@ -332,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */,
 				6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 			);
