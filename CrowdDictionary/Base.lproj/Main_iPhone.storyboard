@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1125" y="2097"/>
         </scene>
-        <!--View Controller-->
+        <!--Crowd Dictionary Random Definition-->
         <scene sceneID="UYu-3U-5eu">
             <objects>
-                <viewController id="Id5-6o-mKZ" sceneMemberID="viewController">
+                <viewController id="Id5-6o-mKZ" customClass="CrowdDictionaryRandomDefinition" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bZs-Li-MeF"/>
                         <viewControllerLayoutGuide type="bottom" id="y2b-XD-oYh"/>

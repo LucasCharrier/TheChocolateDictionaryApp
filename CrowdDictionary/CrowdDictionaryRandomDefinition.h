@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CrowdDictionaryWebAPI.h"
 #define RANDOM_DEFINITION @"random"
 
 @interface CrowdDictionaryRandomDefinition : UIViewController

@@ -27,4 +27,17 @@
         });
     });
 }
+
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self loadRandomDefinition];
+}
+
+- (void)loadRandomDefinition{
+    self.randomDefinition = [CrowdDictionaryWebAPI randomSearch];
+    NSLog(@"%@",self.randomDefinition);
+    NSLog(@"%@",[self.randomDefinition valueForKey:@"Word"]);
+}
+
 @end

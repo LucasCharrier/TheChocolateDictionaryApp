@@ -25,9 +25,19 @@
 + (NSArray *)mostPopularDefinitions
 {
     NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions.json"];
-    return [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
+    NSDictionary *tmp = [self executeCrowdDictionaryFetch:request];
+    NSLog(@"ici le contenu %@",[tmp valueForKeyPath:@"definitions.Definition"]);
+    return [tmp valueForKeyPath:@"definitions.Definition"];
 }
 
++ (NSArray *)randomSearch
+{
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/randomSearch.json"];
+    NSDictionary *tmp = [self executeCrowdDictionaryFetch:request];
+    NSLog(@"ici le contenu %@",[tmp valueForKeyPath:@"definition"]);
+    return [tmp valueForKeyPath:@"definition"];
+    
+}
 
 
 + (NSArray *)definitionsForUser:(NSString *)userID
