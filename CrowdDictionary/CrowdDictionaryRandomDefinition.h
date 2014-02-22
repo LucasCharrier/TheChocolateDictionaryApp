@@ -10,6 +10,6 @@
 #import "CrowdDictionaryWebAPI.h"
 #define RANDOM_DEFINITION @"random"
 
-@interface CrowdDictionaryRandomDefinition : UIViewController
+@interface CrowdDictionaryRandomDefinition : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSArray* randomDefinition;
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F532FA21-4E9F-461F-BD52-8983AECF0D45</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CrowdDictionary</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5BD9966D-9FF6-40B6-88B1-F67FE0043911</key>
+		<string>https://github.com/LucasCharrier/TheChocolateDictionaryApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CrowdDictionary.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5BD9966D-9FF6-40B6-88B1-F67FE0043911</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/LucasCharrier/TheChocolateDictionaryApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5BD9966D-9FF6-40B6-88B1-F67FE0043911</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5BD9966D-9FF6-40B6-88B1-F67FE0043911</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CrowdDictionary</string>
+		</dict>
+	</array>
+</dict>
+</plist>

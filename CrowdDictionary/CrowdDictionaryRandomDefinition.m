@@ -8,7 +8,7 @@
 
 #import "CrowdDictionaryRandomDefinition.h"
 
-@implementation CrowdDictionaryRandomDefinition
+@implementation CrowdDictionaryRandomDefinition 
 
 - (IBAction)refresh:(id)sender {
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -39,5 +39,25 @@
     NSLog(@"%@",self.randomDefinition);
     NSLog(@"%@",[self.randomDefinition valueForKey:@"Word"]);
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+}
+
+- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+{
+
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+
+}
+
 
 @end
