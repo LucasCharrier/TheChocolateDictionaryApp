@@ -23,6 +23,22 @@
 		652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652DAC4D18A1CA0700287F15 /* CrowdDictionaryTests.m */; };
 		6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */; };
 		6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */; };
+		6567364F18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567364E18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m */; };
+		6567365018BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567364E18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m */; };
+		6567365618BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567365518BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m */; };
+		6567365718BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567365518BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m */; };
+		6567365B18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567365A18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m */; };
+		6567365C18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567365A18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m */; };
+		6567366418BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366018BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png */; };
+		6567366518BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366018BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png */; };
+		6567366618BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366118BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png */; };
+		6567366718BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366118BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png */; };
+		6567366818BFF89700BBE3A2 /* glyphicons_345_hand_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366218BFF89700BBE3A2 /* glyphicons_345_hand_right.png */; };
+		6567366918BFF89700BBE3A2 /* glyphicons_345_hand_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366218BFF89700BBE3A2 /* glyphicons_345_hand_right.png */; };
+		6567366A18BFF89700BBE3A2 /* glyphicons_346_hand_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366318BFF89700BBE3A2 /* glyphicons_346_hand_left.png */; };
+		6567366B18BFF89700BBE3A2 /* glyphicons_346_hand_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366318BFF89700BBE3A2 /* glyphicons_346_hand_left.png */; };
+		6567366E18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */; };
+		6567366F18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */; };
 		6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */; };
 		6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */; };
 		65E14D5818A29AF900E10F33 /* glyphicons_003_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */; };
@@ -69,9 +85,21 @@
 		652DAC4D18A1CA0700287F15 /* CrowdDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTests.m; sourceTree = "<group>"; };
 		6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPI.h; sourceTree = "<group>"; };
 		6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryWebAPI.m; sourceTree = "<group>"; };
+		6567364D18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryMostRecentDefinitionsViewController.h; sourceTree = "<group>"; };
+		6567364E18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryMostRecentDefinitionsViewController.m; sourceTree = "<group>"; };
+		6567365418BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryMostPopularDefinitionViewController.h; sourceTree = "<group>"; };
+		6567365518BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryMostPopularDefinitionViewController.m; sourceTree = "<group>"; };
+		6567365918BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryDefinitionsForUserViewController.h; sourceTree = "<group>"; };
+		6567365A18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryDefinitionsForUserViewController.m; sourceTree = "<group>"; };
+		6567366018BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_343_thumbs_up.png; sourceTree = "<group>"; };
+		6567366118BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_344_thumbs_down.png; sourceTree = "<group>"; };
+		6567366218BFF89700BBE3A2 /* glyphicons_345_hand_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_345_hand_right.png; sourceTree = "<group>"; };
+		6567366318BFF89700BBE3A2 /* glyphicons_346_hand_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_346_hand_left.png; sourceTree = "<group>"; };
+		6567366C18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryTableViewCell.h; sourceTree = "<group>"; };
+		6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTableViewCell.m; sourceTree = "<group>"; };
 		6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPIDelegate.h; sourceTree = "<group>"; };
-		6590CF0F18B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryRandomDefinition.h; sourceTree = "<group>"; };
-		6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryRandomDefinition.m; sourceTree = "<group>"; };
+		6590CF0F18B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryRandomDefinition.h; path = ../CrowdDictionaryRandomDefinition.h; sourceTree = "<group>"; };
+		6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryRandomDefinition.m; path = ../CrowdDictionaryRandomDefinition.m; sourceTree = "<group>"; };
 		65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_003_user.png; sourceTree = "<group>"; };
 		65E14D5018A29AF900E10F33 /* glyphicons_027_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_027_search.png; sourceTree = "<group>"; };
 		65E14D5118A29AF900E10F33 /* glyphicons_030_pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_030_pencil.png; sourceTree = "<group>"; };
@@ -142,16 +170,20 @@
 		652DAC2218A1CA0700287F15 /* CrowdDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				65E14D4E18A29AF900E10F33 /* Icon */,
+				6567365E18BFF76600BBE3A2 /* Resources */,
+				6567365818BF95C200BBE3A2 /* Definitions for user */,
+				6567365318BF94D800BBE3A2 /* Most Popular Definitions */,
+				6567365218BF94C700BBE3A2 /* Most Recent Definitions */,
+				6567365118BF94AD00BBE3A2 /* Random Definition */,
 				652DAC2B18A1CA0700287F15 /* CrowdDictionaryAppDelegate.h */,
+				6567366C18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.h */,
+				6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */,
 				652DAC2C18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m */,
 				652DAC2E18A1CA0700287F15 /* Main_iPhone.storyboard */,
 				652DAC3118A1CA0700287F15 /* Main_iPad.storyboard */,
 				6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */,
 				6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */,
 				6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */,
-				6590CF0F18B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.h */,
-				6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */,
 				652DAC3A18A1CA0700287F15 /* Images.xcassets */,
 				652DAC2318A1CA0700287F15 /* Supporting Files */,
 			);
@@ -187,9 +219,66 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		65E14D4E18A29AF900E10F33 /* Icon */ = {
+		6567365118BF94AD00BBE3A2 /* Random Definition */ = {
 			isa = PBXGroup;
 			children = (
+				6590CF0F18B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.h */,
+				6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */,
+			);
+			name = "Random Definition";
+			path = CrowdDictionaryIcon;
+			sourceTree = "<group>";
+		};
+		6567365218BF94C700BBE3A2 /* Most Recent Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				6567364D18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.h */,
+				6567364E18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m */,
+			);
+			name = "Most Recent Definitions";
+			sourceTree = "<group>";
+		};
+		6567365318BF94D800BBE3A2 /* Most Popular Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				6567365418BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.h */,
+				6567365518BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m */,
+			);
+			name = "Most Popular Definitions";
+			sourceTree = "<group>";
+		};
+		6567365818BF95C200BBE3A2 /* Definitions for user */ = {
+			isa = PBXGroup;
+			children = (
+				6567365918BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.h */,
+				6567365A18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m */,
+			);
+			name = "Definitions for user";
+			sourceTree = "<group>";
+		};
+		6567365E18BFF76600BBE3A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6567365F18BFF77600BBE3A2 /* Images */,
+				65E14D4E18A29AF900E10F33 /* Icons */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6567365F18BFF77600BBE3A2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		65E14D4E18A29AF900E10F33 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				6567366018BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png */,
+				6567366118BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png */,
+				6567366218BFF89700BBE3A2 /* glyphicons_345_hand_right.png */,
+				6567366318BFF89700BBE3A2 /* glyphicons_346_hand_left.png */,
 				65E14D6318A29CF200E10F33 /* glyphicons_083_random.png */,
 				65E14D6118A29B7100E10F33 /* glyphicons_020_home.png */,
 				65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */,
@@ -202,7 +291,7 @@
 				65E14D5618A29AF900E10F33 /* glyphicons_066_tags.png */,
 				65E14D5718A29AF900E10F33 /* glyphicons_347_hand_up.png */,
 			);
-			name = Icon;
+			name = Icons;
 			path = CrowdDictionaryIcon;
 			sourceTree = "<group>";
 		};
@@ -283,8 +372,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6567366A18BFF89700BBE3A2 /* glyphicons_346_hand_left.png in Resources */,
 				65E14D5D18A29AF900E10F33 /* glyphicons_051_eye_open.png in Resources */,
 				652DAC3318A1CA0700287F15 /* Main_iPad.storyboard in Resources */,
+				6567366818BFF89700BBE3A2 /* glyphicons_345_hand_right.png in Resources */,
 				652DAC3B18A1CA0700287F15 /* Images.xcassets in Resources */,
 				65E14D6218A29B7100E10F33 /* glyphicons_020_home.png in Resources */,
 				65E14D5F18A29AF900E10F33 /* glyphicons_066_tags.png in Resources */,
@@ -297,6 +388,8 @@
 				652DAC2718A1CA0700287F15 /* InfoPlist.strings in Resources */,
 				65E14D5918A29AF900E10F33 /* glyphicons_027_search.png in Resources */,
 				65E14D5C18A29AF900E10F33 /* glyphicons_049_star - copie.png in Resources */,
+				6567366618BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */,
+				6567366418BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */,
 				65E14D5E18A29AF900E10F33 /* glyphicons_065_tag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +398,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6567366B18BFF89700BBE3A2 /* glyphicons_346_hand_left.png in Resources */,
+				6567366518BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */,
 				652DAC4C18A1CA0700287F15 /* InfoPlist.strings in Resources */,
+				6567366918BFF89700BBE3A2 /* glyphicons_345_hand_right.png in Resources */,
+				6567366718BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,10 +413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6567365618BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */,
+				6567366E18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */,
 				652DAC2D18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m in Sources */,
 				6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
+				6567364F18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
 				6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC2918A1CA0700287F15 /* main.m in Sources */,
+				6567365B18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,8 +428,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6567365C18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
+				6567365018BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
 				6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */,
+				6567366F18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */,
+				6567365718BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */,
 				6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
