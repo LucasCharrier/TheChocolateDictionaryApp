@@ -7,6 +7,7 @@
 //
 
 #import "CrowdDictionaryRandomDefinition.h"
+#import "CrowdDictionaryTableViewCell.h"
 
 @implementation CrowdDictionaryRandomDefinition 
 
@@ -40,24 +41,46 @@
     NSLog(@"%@",[self.randomDefinition valueForKey:@"Word"]);
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 12;
 }
 
-- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+- (float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 0;
+    return 350;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- table
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-      return 0;
+    static NSString *CellIdentifier = @"Random";
+    CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    cell.word.text = @"Kikou";
+    cell.definition.text = @"La famille";
+    
+    return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 20;
+}
+
+
+
 
 
 @end
