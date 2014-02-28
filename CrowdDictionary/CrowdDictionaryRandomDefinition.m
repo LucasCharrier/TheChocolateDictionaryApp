@@ -18,7 +18,7 @@
     dispatch_queue_t downloadQueue = dispatch_queue_create("Crowd Dictionary downloader", NULL);
     /* multiphreading, we are creating a new phread in order to not blocked the application while we download the images */
     dispatch_async(downloadQueue, ^{
-        NSArray* randomDefinition = [[NSUserDefaults standardUserDefaults] objectForKey:RANDOM_DEFINITION];
+        NSDictionary* randomDefinition = [[NSUserDefaults standardUserDefaults] objectForKey:RANDOM_DEFINITION];
         
         NSLog(@"%@",randomDefinition);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -45,7 +45,7 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 12;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -55,12 +55,14 @@
     return 1;
 }
 
-- (float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 350;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0;
 }
 
-- table
+- (float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 450;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -68,19 +70,16 @@
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
-    cell.word.text = @"Kikou";
-    cell.definition.text = @"La famille";
+    cell.word.text =  [self.randomDefinition valueForKeyPath:@"Word.name"];
+    cell.definition.text = [self.randomDefinition valueForKeyPath:@"Definition.definition"];
+    cell.example.text = [self.randomDefinition valueForKeyPath:@"Definition.exemple"];
+    cell.points.text = [self.randomDefinition valueForKeyPath:@"Definition.points"];
+    cell.username.text = [self.randomDefinition valueForKeyPath:@"User.username"];
+    cell.date.text = [self.randomDefinition valueForKeyPath:@"Definition.created"];
+    //cell.tags.text = [self.randomDefinition valueForKeyPath:@"DefinitionTag.Tag.name"];
     
     return cell;
 }
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20;
-}
-
-
-
 
 
 @end

@@ -30,7 +30,7 @@
     return [tmp valueForKeyPath:@"definitions.Definition"];
 }
 
-+ (NSArray *)randomSearch
++ (NSDictionary *)randomSearch
 {
     NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/randomSearch.json"];
     NSDictionary *tmp = [self executeCrowdDictionaryFetch:request];

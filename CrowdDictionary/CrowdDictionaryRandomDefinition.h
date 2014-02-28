@@ -11,5 +11,5 @@
 #define RANDOM_DEFINITION @"random"
 
 @interface CrowdDictionaryRandomDefinition : UITableViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic,strong) NSArray* randomDefinition;
+@property (nonatomic,strong) NSDictionary* randomDefinition;
 @end
