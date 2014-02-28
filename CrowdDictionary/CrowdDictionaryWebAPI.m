@@ -22,7 +22,7 @@
     return results;
 }
 
-+ (NSArray *)mostPopularDefinitions
++ (NSDictionary *)mostPopularDefinitions
 {
     NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions.json"];
     NSDictionary *tmp = [self executeCrowdDictionaryFetch:request];
@@ -40,9 +40,9 @@
 }
 
 
-+ (NSArray *)definitionsForUser:(NSString *)userID
++ (NSDictionary *)definitionsForUser:(NSString *)userID
 {
-    NSArray *definitions = nil;
+    NSDictionary *definitions = nil;
     //NSString *userID = [userID objectForKey:CROWD_DICTIONARY_USER_ID];
     if (userID) {
         NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/user/users/show/%@", userID];
@@ -54,9 +54,9 @@
     return definitions;
 }
 
-+ (NSArray *)definitionsForWord:(NSString *)wordID
++ (NSDictionary *)definitionsForWord:(NSString *)wordID
 {
-    NSArray *definitions = nil;
+    NSDictionary *definitions = nil;
     //NSString *wordID = [word objectForKey:CROWD_DICTIONARY_WORD_ID];
     if (wordID) {
         NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/words/show/%@", wordID];
@@ -68,14 +68,15 @@
     return definitions;
 }
 
-+ (NSArray *)lastDefinitions
++ (NSDictionary *)mostRecentDefinitions
 {
-    NSArray *definitions = nil;
-    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/lastDefinitions"];
+    NSDictionary *definitions = nil;
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/lastDefinitions.json"];
     definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
     for (NSMutableDictionary *definition in definitions) {
         
     }
+    NSLog(@"%@",definitions);
     return definitions;
 }
 

@@ -61,7 +61,7 @@
 
 - (float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 450;
+    return 380;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,7 +76,11 @@
     cell.points.text = [self.randomDefinition valueForKeyPath:@"Definition.points"];
     cell.username.text = [self.randomDefinition valueForKeyPath:@"User.username"];
     cell.date.text = [self.randomDefinition valueForKeyPath:@"Definition.created"];
-    //cell.tags.text = [self.randomDefinition valueForKeyPath:@"DefinitionTag.Tag.name"];
+    cell.tags.text = @" ";
+    for(NSArray* tag in [self.randomDefinition valueForKeyPath:@"DefinitionTag.Tag"]){
+      cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
+    }
+    
     
     return cell;
 }

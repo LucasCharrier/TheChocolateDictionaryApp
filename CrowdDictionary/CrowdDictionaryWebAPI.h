@@ -28,10 +28,10 @@
 @property (strong, nonatomic) NSString *user_id;
 @property (strong, nonatomic) NSString *user_username;
 @property (strong, nonatomic) NSString *tags;
-+ (NSArray *)mostPopularDefinitions;
-+ (NSArray *)mostRecentDefinitions;
-+ (NSArray *)definitionsForUser:(NSString *)userID;
-+ (NSArray *)definitionsForWord:(NSString *)wordID;
++ (NSDictionary *)mostPopularDefinitions;
++ (NSDictionary *)mostRecentDefinitions;
++ (NSDictionary *)definitionsForUser:(NSString *)userID;
++ (NSDictionary *)definitionsForWord:(NSString *)wordID;
 + (NSDictionary *)randomSearch;
 
 @property (weak, nonatomic) id<CrowdDictionaryWebAPIDelegate> delegate;

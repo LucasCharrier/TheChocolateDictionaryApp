@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CrowdDictionaryWebAPI.h"
+#define MOST_RECENT_DEFINITIONS @"mostRecent"
 
-@interface CrowdDictionaryMostRecentDefinitionsViewController : UITableViewController
-
+@interface CrowdDictionaryMostRecentDefinitionsViewController : UITableViewController  <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic,strong) NSDictionary* mostRecentDefinitions;
 @end

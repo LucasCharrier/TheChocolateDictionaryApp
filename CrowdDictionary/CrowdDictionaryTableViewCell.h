@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *points;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UILabel *username;
+
 @property (weak, nonatomic) IBOutlet UILabel *tags;
 
 @end
