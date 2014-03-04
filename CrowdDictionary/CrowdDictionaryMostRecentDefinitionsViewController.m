@@ -15,6 +15,8 @@
 
 @implementation CrowdDictionaryMostRecentDefinitionsViewController
 
+@synthesize mostRecentDefinitions;
+
 - (IBAction)refresh:(id)sender {
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
@@ -86,7 +88,7 @@
         for(NSArray* tag in [self.mostRecentDefinitions valueForKeyPath:@"DefinitionTag.Tag"]){
             cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
         }
-    }
+    
      */
     
     

@@ -1,22 +1,23 @@
 //
-//  CrowdDictionaryDefinitionsForUserViewController.m
+//  CrowdDictionaryDefinitionsForWordViewController.m
 //  CrowdDictionary
 //
-//  Created by Lucas Charrier on 27/02/2014.
+//  Created by Lucas Charrier on 02/03/2014.
 //  Copyright (c) 2014 Lucas Charrier. All rights reserved.
 //
 
-#import "CrowdDictionaryDefinitionsForUserViewController.h"
+#import "CrowdDictionaryDefinitionsForWordViewController.h"
 #import "CrowdDictionaryTableViewCell.h"
 
-@interface CrowdDictionaryDefinitionsForUserViewController ()
+@interface CrowdDictionaryDefinitionsForWordViewController ()
 
 @end
 
-@implementation CrowdDictionaryDefinitionsForUserViewController
+@implementation CrowdDictionaryDefinitionsForWordViewController
 
-@synthesize definitionsForUser = _definitionsForUser;
-@synthesize userID = _userID;
+
+@synthesize definitionsForWord = _definitionsForWord;
+@synthesize searchWord = _searchWord;
 
 - (IBAction)refresh:(id)sender {
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -25,13 +26,13 @@
     dispatch_queue_t downloadQueue = dispatch_queue_create("Crowd Dictionary downloader", NULL);
     /* multiphreading, we are creating a new phread in order to not blocked the application while we download the images */
     dispatch_async(downloadQueue, ^{
-        NSDictionary* DefinitionsForUser = [[NSUserDefaults standardUserDefaults] objectForKey:DEFINTIONS_FOR_USER];
+        NSDictionary* definitionsForWord = [[NSUserDefaults standardUserDefaults] objectForKey:DEFITNITIONS_FOR_WORD];
         
-        NSLog(@"%@",DefinitionsForUser);
+        NSLog(@"%@",definitionsForWord);
         dispatch_async(dispatch_get_main_queue(), ^{
             /* once we finished downloading the images we come back to the main thread to put these new photos */
             self.navigationItem.rightBarButtonItem = sender;
-            self.definitionsForUser = DefinitionsForUser;
+            self.definitionsForWord = definitionsForWord;
         });
     });
 }
@@ -39,12 +40,13 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self loadMostPopularDefinition];
+    [self loadDefinitionsForWord];
+    
 }
 
-- (void)loadMostPopularDefinition{
-    self.definitionsForUser = [CrowdDictionaryWebAPI definitionsForUser:self.userID];
-    NSLog(@"kikou : %@",self.definitionsForUser );
+- (void)loadDefinitionsForWord{
+    self.definitionsForWord = [CrowdDictionaryWebAPI definitionsForWord:self.searchWord.text];
+    NSLog(@"kikou : %@",self.definitionsForWord );
     
 }
 
@@ -59,7 +61,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.definitionsForUser count];
+    return [self.definitionsForWord count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -73,21 +75,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Definitions For User";
+    static NSString *CellIdentifier = @"Definitions For Word";
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    //NSLog(@"%@",self.DefinitionsForUser);
+    //NSLog(@"%@",self.definitionsForWord);
     
     // Configure the cell...
-    cell.word.text =  [self.definitionsForUser valueForKeyPath:@"Word.name"];
-    cell.definition.text = [self.definitionsForUser valueForKeyPath:@"Definition.definition"];
-    cell.example.text = [self.definitionsForUser valueForKeyPath:@"Definition.exemple"];
-    cell.points.text = [self.definitionsForUser valueForKeyPath:@"Definition.points"];
-    cell.username.text = [self.definitionsForUser valueForKeyPath:@"User.username"];
-    cell.date.text = [self.definitionsForUser valueForKeyPath:@"Definition.created"];
+    cell.word.text =  [self.definitionsForWord valueForKeyPath:@"Word.name"];
+    cell.definition.text = [self.definitionsForWord valueForKeyPath:@"Definition.definition"];
+    cell.example.text = [self.definitionsForWord valueForKeyPath:@"Definition.exemple"];
+    cell.points.text = [self.definitionsForWord valueForKeyPath:@"Definition.points"];
+    cell.username.text = [self.definitionsForWord valueForKeyPath:@"User.username"];
+    cell.date.text = [self.definitionsForWord valueForKeyPath:@"Definition.created"];
     cell.tags.text = @" ";
     
-    for(NSArray* tag in [self.definitionsForUser valueForKeyPath:@"DefinitionTag.Tag"]){
+    for(NSArray* tag in [self.definitionsForWord valueForKeyPath:@"DefinitionTag.Tag"]){
         cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
     }
     

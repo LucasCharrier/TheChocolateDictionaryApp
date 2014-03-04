@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CrowdDictionaryWebAPI.h"
+#define DEFINTIONS_FOR_USER @"DefinitionsForUser"
 
-@interface CrowdDictionaryDefinitionsForUserViewController : UITableViewController
+@interface CrowdDictionaryDefinitionsForUserViewController : UITableViewController  <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic,strong) NSDictionary* definitionsForUser;
+@property (nonatomic) NSString* userID;
 
 @end

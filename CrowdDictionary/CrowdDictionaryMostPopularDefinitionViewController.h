@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CrowdDictionaryWebAPI.h"
+#define MOST_POPULAR_DEFINITIONS @"mostPopularDefinitions"
 
-@interface CrowdDictionaryMostPopularDefinitionViewController : UITableViewController
+@interface CrowdDictionaryMostPopularDefinitionViewController : UITableViewController  <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic,strong) NSDictionary* mostPopularDefinitions;
 
 @end

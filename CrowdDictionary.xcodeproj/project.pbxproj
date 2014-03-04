@@ -39,6 +39,8 @@
 		6567366B18BFF89700BBE3A2 /* glyphicons_346_hand_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567366318BFF89700BBE3A2 /* glyphicons_346_hand_left.png */; };
 		6567366E18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */; };
 		6567366F18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */; };
+		658AD6BC18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AD6BB18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m */; };
+		658AD6BD18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AD6BB18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m */; };
 		6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */; };
 		6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */; };
 		65E14D5818A29AF900E10F33 /* glyphicons_003_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E14D4F18A29AF900E10F33 /* glyphicons_003_user.png */; };
@@ -97,6 +99,8 @@
 		6567366318BFF89700BBE3A2 /* glyphicons_346_hand_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_346_hand_left.png; sourceTree = "<group>"; };
 		6567366C18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryTableViewCell.h; sourceTree = "<group>"; };
 		6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTableViewCell.m; sourceTree = "<group>"; };
+		658AD6BA18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryDefinitionsForWordViewController.h; sourceTree = "<group>"; };
+		658AD6BB18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryDefinitionsForWordViewController.m; sourceTree = "<group>"; };
 		6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryWebAPIDelegate.h; sourceTree = "<group>"; };
 		6590CF0F18B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryRandomDefinition.h; path = ../CrowdDictionaryRandomDefinition.h; sourceTree = "<group>"; };
 		6590CF1018B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryRandomDefinition.m; path = ../CrowdDictionaryRandomDefinition.m; sourceTree = "<group>"; };
@@ -171,7 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				6567365E18BFF76600BBE3A2 /* Resources */,
-				6567365818BF95C200BBE3A2 /* Definitions for user */,
+				658AD6B918C385960021B48A /* Definitions For Word */,
+				6567365818BF95C200BBE3A2 /* Definitions For User */,
 				6567365318BF94D800BBE3A2 /* Most Popular Definitions */,
 				6567365218BF94C700BBE3A2 /* Most Recent Definitions */,
 				6567365118BF94AD00BBE3A2 /* Random Definition */,
@@ -247,13 +252,13 @@
 			name = "Most Popular Definitions";
 			sourceTree = "<group>";
 		};
-		6567365818BF95C200BBE3A2 /* Definitions for user */ = {
+		6567365818BF95C200BBE3A2 /* Definitions For User */ = {
 			isa = PBXGroup;
 			children = (
 				6567365918BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.h */,
 				6567365A18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m */,
 			);
-			name = "Definitions for user";
+			name = "Definitions For User";
 			sourceTree = "<group>";
 		};
 		6567365E18BFF76600BBE3A2 /* Resources */ = {
@@ -270,6 +275,15 @@
 			children = (
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		658AD6B918C385960021B48A /* Definitions For Word */ = {
+			isa = PBXGroup;
+			children = (
+				658AD6BA18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.h */,
+				658AD6BB18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m */,
+			);
+			name = "Definitions For Word";
 			sourceTree = "<group>";
 		};
 		65E14D4E18A29AF900E10F33 /* Icons */ = {
@@ -415,6 +429,7 @@
 			files = (
 				6567365618BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */,
 				6567366E18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */,
+				658AD6BC18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */,
 				652DAC2D18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m in Sources */,
 				6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 				6567364F18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
@@ -435,6 +450,7 @@
 				6567366F18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */,
 				6567365718BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */,
 				6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
+				658AD6BD18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
