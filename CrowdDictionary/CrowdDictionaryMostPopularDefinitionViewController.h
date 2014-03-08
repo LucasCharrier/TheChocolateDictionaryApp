@@ -11,6 +11,6 @@
 #define MOST_POPULAR_DEFINITIONS @"mostPopularDefinitions"
 
 @interface CrowdDictionaryMostPopularDefinitionViewController : UITableViewController  <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic,strong) NSDictionary* mostPopularDefinitions;
-
+@property (nonatomic,strong) NSArray* mostPopularDefinitions;
+@property (nonatomic) NSString* currentPage;
 @end

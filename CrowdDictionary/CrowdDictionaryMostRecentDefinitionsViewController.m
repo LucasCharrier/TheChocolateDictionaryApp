@@ -83,7 +83,7 @@
     static NSString *CellIdentifier = @"Most Recent Definitions";
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    //NSLog(@"%@",self.mostRecentDefinitions);
+   // NSLog(@"bonjour les gens %@",self.mostRecentDefinitions);
    
     
     NSDictionary* definition = [self.mostRecentDefinitions objectAtIndex:indexPath.row];

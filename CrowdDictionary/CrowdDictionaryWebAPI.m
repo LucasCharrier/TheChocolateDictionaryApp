@@ -22,12 +22,13 @@
     return results;
 }
 
-+ (NSDictionary *)mostPopularDefinitions
++ (NSArray *)mostPopularDefinitionsOnPage:(NSString*)pageNumber;
 {
-    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions.json"];
-    NSDictionary *tmp = [self executeCrowdDictionaryFetch:request];
-    NSLog(@"ici le contenu %@",[tmp valueForKeyPath:@"definitions.Definition"]);
-    return [tmp valueForKeyPath:@"definitions.Definition"];
+    NSArray *definitions = nil;
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions/page:%@.json",pageNumber];
+    definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions"];
+    NSLog(@"kikou la définition : %@", definitions);
+    return definitions;
 }
 
 + (NSDictionary *)randomSearch

@@ -96,4 +96,8 @@
     return cell;
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    NSLog(@"searchBar SearchBUtton has been clicked");
+}
+
 @end

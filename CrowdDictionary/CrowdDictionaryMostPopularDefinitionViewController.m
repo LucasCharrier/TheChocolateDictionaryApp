@@ -14,7 +14,15 @@
 @end
 
 @implementation CrowdDictionaryMostPopularDefinitionViewController
-@synthesize mostPopularDefinitions;
+@synthesize mostPopularDefinitions = _mostPopularDefinitions;
+
+
+- (NSString *)currentPage{
+    if(!_currentPage){
+        self.currentPage = @"2";
+    }
+    return _currentPage;
+}
 
 - (IBAction)refresh:(id)sender {
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -23,7 +31,7 @@
     dispatch_queue_t downloadQueue = dispatch_queue_create("Crowd Dictionary downloader", NULL);
     /* multiphreading, we are creating a new phread in order to not blocked the application while we download the images */
     dispatch_async(downloadQueue, ^{
-        NSDictionary* mostPopularDefinitions = [[NSUserDefaults standardUserDefaults] objectForKey:MOST_POPULAR_DEFINITIONS];
+        NSArray* mostPopularDefinitions = [[NSUserDefaults standardUserDefaults] objectForKey:MOST_POPULAR_DEFINITIONS];
         
         NSLog(@"%@",mostPopularDefinitions);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -35,13 +43,14 @@
 }
 
 
+
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self loadMostPopularDefinition];
+    [self loadMostRecentDefinition];
 }
 
-- (void)loadMostPopularDefinition{
-    self.mostPopularDefinitions = [CrowdDictionaryWebAPI mostPopularDefinitions];
+- (void)loadMostRecentDefinition{
+    self.mostPopularDefinitions = [CrowdDictionaryWebAPI mostPopularDefinitionsOnPage:@"1"];
     NSLog(@"kikou : %@",self.mostPopularDefinitions );
     
 }
@@ -74,25 +83,55 @@
     static NSString *CellIdentifier = @"Most Popular Definitions";
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    //NSLog(@"%@",self.mostPopularDefinitions);
+    // NSLog(@"bonjour les gens %@",self.mostRecentDefinitions);
     
-     // Configure the cell...
-     cell.word.text =  [self.mostPopularDefinitions valueForKeyPath:@"Word.name"];
-     cell.definition.text = [self.mostPopularDefinitions valueForKeyPath:@"Definition.definition"];
-     cell.example.text = [self.mostPopularDefinitions valueForKeyPath:@"Definition.exemple"];
-     cell.points.text = [self.mostPopularDefinitions valueForKeyPath:@"Definition.points"];
-     cell.username.text = [self.mostPopularDefinitions valueForKeyPath:@"User.username"];
-     cell.date.text = [self.mostPopularDefinitions valueForKeyPath:@"Definition.created"];
-     cell.tags.text = @" ";
     
-     for(NSArray* tag in [self.mostPopularDefinitions valueForKeyPath:@"DefinitionTag.Tag"]){
-         cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
-     }
+    NSDictionary* definition = [self.mostPopularDefinitions objectAtIndex:indexPath.row];
     
-
+    // Configure the cell...
+    cell.word.text =  [definition valueForKeyPath:@"Word.name"];
+    cell.definition.text = [definition valueForKeyPath:@"Definition.definition"];
+    cell.example.text = [definition valueForKeyPath:@"Definition.exemple"];
+    cell.points.text = [definition valueForKeyPath:@"Definition.points"];
+    cell.username.text = [definition valueForKeyPath:@"User.username"];
+    cell.date.text = [definition valueForKeyPath:@"Definition.created"];
+    cell.tags.text = @" ";
+    for(NSArray* tag in [definition valueForKeyPath:@"DefinitionTag.Tag"]){
+        cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
+    }
+    
+    
     
     
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)aScrollView {
+    CGPoint offset = aScrollView.contentOffset;
+    CGRect bounds = aScrollView.bounds;
+    CGSize size = aScrollView.contentSize;
+    UIEdgeInsets inset = aScrollView.contentInset;
+    float y = offset.y + bounds.size.height - inset.bottom;
+    float h = size.height;
+    // NSLog(@"offset: %f", offset.y);
+    // NSLog(@"content.height: %f", size.height);
+    // NSLog(@"bounds.height: %f", bounds.size.height);
+    // NSLog(@"inset.top: %f", inset.top);
+    // NSLog(@"inset.bottom: %f", inset.bottom);
+    // NSLog(@"pos: %f of %f", y, h);
+    
+    float reload_distance = 10;
+    if(y > h + reload_distance) {
+        NSLog(@"load more rows");
+        NSArray* moreDefinition = [CrowdDictionaryWebAPI mostRecentDefinitionsOnPage:self.currentPage];
+        if(moreDefinition){
+            self.currentPage = [NSString stringWithFormat:@"%d", [self.currentPage intValue] + 1];
+            self.mostPopularDefinitions = [self.mostPopularDefinitions arrayByAddingObjectsFromArray:moreDefinition];
+            NSLog(@"%@",self.mostPopularDefinitions);
+            [self.tableView reloadData];
+        }
+        
+    }
 }
 
 

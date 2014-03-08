@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VP-ZT-pnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="779"/>
+            <point key="canvasLocation" x="1469" y="564"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U5V-QL-2KM">
@@ -163,7 +163,7 @@
                         <segue destination="yLX-1q-cUK" kind="relationship" relationship="viewControllers" id="V07-Sa-F8i"/>
                         <segue destination="Glq-OS-k3o" kind="relationship" relationship="viewControllers" id="bZ5-Vo-3S0"/>
                         <segue destination="d4I-BK-xaE" kind="relationship" relationship="viewControllers" id="ytw-6b-bGQ"/>
-                        <segue destination="Omm-74-nWb" kind="relationship" relationship="viewControllers" id="4Ta-L1-3Gd"/>
+                        <segue destination="Omm-74-nWb" kind="relationship" relationship="viewControllers" id="9ru-2h-KFj"/>
                         <segue destination="cbZ-7g-zvm" kind="relationship" relationship="viewControllers" id="tIU-MK-bvV"/>
                     </connections>
                 </tabBarController>
@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="767" y="1734"/>
         </scene>
-        <!--Crowd Dictionary Most Popular Definitions View Controller-->
+        <!--Crowd Dictionary Most Popular Definition View Controller-->
         <scene sceneID="lK6-X0-047">
             <objects>
-                <viewController id="Omm-74-nWb" customClass="CrowdDictionaryMostPopularDefinitionsViewController" sceneMemberID="viewController">
+                <viewController id="Omm-74-nWb" customClass="CrowdDictionaryMostPopularDefinitionViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="377" sectionHeaderHeight="10" sectionFooterHeight="10" id="Gbf-yr-jrt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,7 +311,7 @@
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="Most Recent Definitions" rowHeight="377" id="2JL-5Y-j8A" customClass="CrowdDictionaryTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="Most Popular Definitions" rowHeight="377" id="2JL-5Y-j8A" customClass="CrowdDictionaryTableViewCell">
                                 <rect key="frame" x="0.0" y="119" width="320" height="377"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2JL-5Y-j8A" id="vHG-wC-3Zy">
@@ -423,17 +423,15 @@
                             <outlet property="delegate" destination="YcX-im-85L" id="cpa-mN-kxf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="glyphicons_347_hand_up.png" id="gMZ-3G-ij6"/>
+                    <tabBarItem key="tabBarItem" title="" image="glyphicons_347_hand_up.png" id="xHo-0F-ONP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyp-9o-xfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="2161"/>
+            <point key="canvasLocation" x="1064" y="744"/>
         </scene>
         <!--Crowd Dictionary Definitions For Word View Controller-->
         <scene sceneID="OCg-UK-zpb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCO-Up-rkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="2qy-7S-tKP"/>
                 <viewController id="gjK-4a-25A" customClass="CrowdDictionaryDefinitionsForWordViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="377" sectionHeaderHeight="10" sectionFooterHeight="10" id="Uoy-QB-olF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -564,8 +562,10 @@
                         <outlet property="searchWord" destination="Wgt-fv-7FE" id="Apx-I4-jo1"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCO-Up-rkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="2qy-7S-tKP"/>
             </objects>
-            <point key="canvasLocation" x="2186" y="2161"/>
+            <point key="canvasLocation" x="2712" y="2161"/>
         </scene>
         <!--Crowd Dictionary Add Definition For Word View Controller-->
         <scene sceneID="gIT-6K-I1E">
@@ -660,7 +660,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IbR-kQ-7b4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="2161"/>
+            <point key="canvasLocation" x="2186" y="2161"/>
         </scene>
     </scenes>
     <resources>

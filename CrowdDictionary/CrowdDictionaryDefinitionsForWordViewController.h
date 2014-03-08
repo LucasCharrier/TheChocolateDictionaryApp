@@ -11,7 +11,7 @@
 #define DEFITNITIONS_FOR_WORD @"DefinitionsForWord"
 
 @interface CrowdDictionaryDefinitionsForWordViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate>
+<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (nonatomic,strong) NSDictionary* definitionsForWord;
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchWord;
