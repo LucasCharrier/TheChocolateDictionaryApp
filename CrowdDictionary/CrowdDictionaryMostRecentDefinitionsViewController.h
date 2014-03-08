@@ -11,5 +11,6 @@
 #define MOST_RECENT_DEFINITIONS @"mostRecent"
 
 @interface CrowdDictionaryMostRecentDefinitionsViewController : UITableViewController  <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic,strong) NSDictionary* mostRecentDefinitions;
+@property (nonatomic,strong) NSArray* mostRecentDefinitions;
+@property (nonatomic) NSString* currentPage;
 @end

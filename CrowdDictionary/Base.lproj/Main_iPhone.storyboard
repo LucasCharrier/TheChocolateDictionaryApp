@@ -15,7 +15,7 @@
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="Random" rowHeight="377" id="ubN-du-caF" customClass="CrowdDictionaryTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="Most Recent Definitions" rowHeight="377" id="ubN-du-caF" customClass="CrowdDictionaryTableViewCell">
                                 <rect key="frame" x="0.0" y="119" width="320" height="377"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ubN-du-caF" id="m1m-NR-CVd">
@@ -252,17 +252,17 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsC-tu-HL2">
+                                                    <rect key="frame" x="16" y="6" width="233" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsC-tu-HL2">
-                                            <rect key="frame" x="41" y="20" width="233" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGS-n3-FJ7">
                                             <rect key="frame" x="40" y="49" width="240" height="91"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -276,16 +276,16 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.89618716030000001" green="0.89618716030000001" blue="0.89618716030000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="date" destination="pKj-xW-AYb" id="9y1-7b-x2I"/>
-                                    <outlet property="definition" destination="lGS-n3-FJ7" id="c2F-G0-yA7"/>
-                                    <outlet property="example" destination="tF7-eR-04v" id="JDo-NY-hHI"/>
-                                    <outlet property="like" destination="GoK-t3-NMb" id="FPf-bV-vzg"/>
-                                    <outlet property="points" destination="GoK-t3-NMb" id="pwi-4g-4wK"/>
-                                    <outlet property="share" destination="nAl-W0-K3i" id="afj-2f-sHq"/>
-                                    <outlet property="tags" destination="dkO-bL-37M" id="EjQ-3L-VQ2"/>
-                                    <outlet property="unlike" destination="uMh-lG-6YG" id="fpL-UQ-nCS"/>
-                                    <outlet property="username" destination="aWp-HE-3S9" id="p2H-ig-W6e"/>
-                                    <outlet property="word" destination="qsC-tu-HL2" id="bEz-As-pwg"/>
+                                    <outlet property="date" destination="pKj-xW-AYb" id="SRz-Xg-tXP"/>
+                                    <outlet property="definition" destination="lGS-n3-FJ7" id="5Vc-Re-tTJ"/>
+                                    <outlet property="example" destination="tF7-eR-04v" id="XWI-Rt-ZFu"/>
+                                    <outlet property="like" destination="uMh-lG-6YG" id="R9N-bD-jK8"/>
+                                    <outlet property="points" destination="GoK-t3-NMb" id="5S6-jQ-IQf"/>
+                                    <outlet property="share" destination="nAl-W0-K3i" id="4An-yn-NlU"/>
+                                    <outlet property="tags" destination="dkO-bL-37M" id="Rf4-aS-SEs"/>
+                                    <outlet property="unlike" destination="XeS-SC-OsY" id="KXG-k2-LPq"/>
+                                    <outlet property="username" destination="aWp-HE-3S9" id="JgC-Bs-SC7"/>
+                                    <outlet property="word" destination="qsC-tu-HL2" id="aP3-Ty-jSY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -432,6 +432,8 @@
         <!--Crowd Dictionary Definitions For Word View Controller-->
         <scene sceneID="OCg-UK-zpb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCO-Up-rkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="2qy-7S-tKP"/>
                 <viewController id="gjK-4a-25A" customClass="CrowdDictionaryDefinitionsForWordViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="377" sectionHeaderHeight="10" sectionFooterHeight="10" id="Uoy-QB-olF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -519,13 +521,6 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sx-gB-ES1">
-                                            <rect key="frame" x="41" y="20" width="233" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9t-ud-F9A">
                                             <rect key="frame" x="40" y="49" width="240" height="91"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -534,6 +529,13 @@
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pex-pJ-EBZ">
+                                            <rect key="frame" x="41" y="20" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
@@ -548,7 +550,7 @@
                                     <outlet property="tags" destination="nFW-rt-SKv" id="qS3-N7-RuW"/>
                                     <outlet property="unlike" destination="MCg-4N-oP0" id="Jr1-qd-nnY"/>
                                     <outlet property="username" destination="xpE-zN-Nh1" id="0dU-W4-Zp6"/>
-                                    <outlet property="word" destination="5Sx-gB-ES1" id="jdY-zZ-muO"/>
+                                    <outlet property="word" destination="pex-pJ-EBZ" id="fdc-O9-4nb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -562,15 +564,13 @@
                         <outlet property="searchWord" destination="Wgt-fv-7FE" id="Apx-I4-jo1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCO-Up-rkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="2qy-7S-tKP"/>
             </objects>
             <point key="canvasLocation" x="2186" y="2161"/>
         </scene>
-        <!--View Controller-->
+        <!--Crowd Dictionary Add Definition For Word View Controller-->
         <scene sceneID="gIT-6K-I1E">
             <objects>
-                <viewController id="Glq-OS-k3o" sceneMemberID="viewController">
+                <viewController id="Glq-OS-k3o" customClass="CrowdDictionaryAddDefinitionForWordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4XB-eR-WHq"/>
                         <viewControllerLayoutGuide type="bottom" id="BlC-FG-bJO"/>
@@ -585,16 +585,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roF-N0-gsZ">
-                                <rect key="frame" x="20" y="132" width="280" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drr-kH-JJ1">
+                                <rect key="frame" x="20" y="140" width="280" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vav-8r-ZIp">
+                                <rect key="frame" x="20" y="470" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gc-5R-MTd">
+                                <rect key="frame" x="20" y="325" width="280" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="glyphicons_030_pencil.png" id="wRn-rW-pUL"/>
+                    <connections>
+                        <outlet property="definition" destination="drr-kH-JJ1" id="thm-iW-2T6"/>
+                        <outlet property="example" destination="6Gc-5R-MTd" id="UHC-Sg-Vp7"/>
+                        <outlet property="tags" destination="Vav-8r-ZIp" id="yHX-Tc-qfF"/>
+                        <outlet property="word" destination="xLB-Ty-kUL" id="NfE-AH-TFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNO-tD-cwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

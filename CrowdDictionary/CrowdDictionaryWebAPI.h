@@ -29,7 +29,7 @@
 @property (strong, nonatomic) NSString *user_username;
 @property (strong, nonatomic) NSString *tags;
 + (NSDictionary *)mostPopularDefinitions;
-+ (NSDictionary *)mostRecentDefinitions;
++ (NSArray *)mostRecentDefinitionsOnPage:(NSString*)pageNumber;
 + (NSDictionary *)definitionsForUser:(NSString *)userID;
 + (NSDictionary *)definitionsForWord:(NSString *)wordID;
 + (NSDictionary *)randomSearch;

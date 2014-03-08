@@ -15,7 +15,15 @@
 
 @implementation CrowdDictionaryMostRecentDefinitionsViewController
 
-@synthesize mostRecentDefinitions;
+@synthesize mostRecentDefinitions = _mostRecentDefinitions;
+@synthesize currentPage = _currentPage;
+
+- (NSString *)currentPage{
+    if(!_currentPage){
+        self.currentPage = @"2";
+    }
+    return _currentPage;
+}
 
 - (IBAction)refresh:(id)sender {
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -24,7 +32,7 @@
     dispatch_queue_t downloadQueue = dispatch_queue_create("Crowd Dictionary downloader", NULL);
     /* multiphreading, we are creating a new phread in order to not blocked the application while we download the images */
     dispatch_async(downloadQueue, ^{
-        NSDictionary* mostRecentDefinitions = [[NSUserDefaults standardUserDefaults] objectForKey:MOST_RECENT_DEFINITIONS];
+        NSArray* mostRecentDefinitions = [[NSUserDefaults standardUserDefaults] objectForKey:MOST_RECENT_DEFINITIONS];
         
         NSLog(@"%@",mostRecentDefinitions);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -42,7 +50,7 @@
 }
 
 - (void)loadMostRecentDefinition{
-    self.mostRecentDefinitions = [CrowdDictionaryWebAPI mostRecentDefinitions];
+    self.mostRecentDefinitions = [CrowdDictionaryWebAPI mostRecentDefinitionsOnPage:@"1"];
     NSLog(@"kikou : %@",self.mostRecentDefinitions );
   
 }
@@ -76,23 +84,54 @@
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     //NSLog(@"%@",self.mostRecentDefinitions);
-    /*
+   
+    
+    NSDictionary* definition = [self.mostRecentDefinitions objectAtIndex:indexPath.row];
+  
     // Configure the cell...
-        cell.word.text =  [self.mostRecentDefinitions valueForKeyPath:@"Word.name"];
-        cell.definition.text = [self.mostRecentDefinitions valueForKeyPath:@"Definition.definition"];
-        cell.example.text = [self.mostRecentDefinitions valueForKeyPath:@"Definition.exemple"];
-        cell.points.text = [self.mostRecentDefinitions valueForKeyPath:@"Definition.points"];
-        cell.username.text = [self.mostRecentDefinitions valueForKeyPath:@"User.username"];
-        cell.date.text = [self.mostRecentDefinitions valueForKeyPath:@"Definition.created"];
+        cell.word.text =  [definition valueForKeyPath:@"Word.name"];
+        cell.definition.text = [definition valueForKeyPath:@"Definition.definition"];
+        cell.example.text = [definition valueForKeyPath:@"Definition.exemple"];
+        cell.points.text = [definition valueForKeyPath:@"Definition.points"];
+        cell.username.text = [definition valueForKeyPath:@"User.username"];
+        cell.date.text = [definition valueForKeyPath:@"Definition.created"];
         cell.tags.text = @" ";
-        for(NSArray* tag in [self.mostRecentDefinitions valueForKeyPath:@"DefinitionTag.Tag"]){
+        for(NSArray* tag in [definition valueForKeyPath:@"DefinitionTag.Tag"]){
             cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
         }
     
-     */
+     
     
     
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)aScrollView {
+    CGPoint offset = aScrollView.contentOffset;
+    CGRect bounds = aScrollView.bounds;
+    CGSize size = aScrollView.contentSize;
+    UIEdgeInsets inset = aScrollView.contentInset;
+    float y = offset.y + bounds.size.height - inset.bottom;
+    float h = size.height;
+    // NSLog(@"offset: %f", offset.y);
+    // NSLog(@"content.height: %f", size.height);
+    // NSLog(@"bounds.height: %f", bounds.size.height);
+    // NSLog(@"inset.top: %f", inset.top);
+    // NSLog(@"inset.bottom: %f", inset.bottom);
+    // NSLog(@"pos: %f of %f", y, h);
+    
+    float reload_distance = 10;
+    if(y > h + reload_distance) {
+        NSLog(@"load more rows");
+        NSArray* moreDefinition = [CrowdDictionaryWebAPI mostRecentDefinitionsOnPage:self.currentPage];
+        if(moreDefinition){
+            self.currentPage = [NSString stringWithFormat:@"%d", [self.currentPage intValue] + 1];
+            self.mostRecentDefinitions = [self.mostRecentDefinitions arrayByAddingObjectsFromArray:moreDefinition];
+            NSLog(@"%@",self.mostRecentDefinitions);
+            [self.tableView reloadData];
+        }
+
+    }
 }
 
 

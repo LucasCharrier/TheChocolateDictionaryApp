@@ -68,15 +68,12 @@
     return definitions;
 }
 
-+ (NSDictionary *)mostRecentDefinitions
++ (NSArray *)mostRecentDefinitionsOnPage:(NSString*)pageNumber;
 {
-    NSDictionary *definitions = nil;
-    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/lastDefinitions.json"];
-    definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
-    for (NSMutableDictionary *definition in definitions) {
-        
-    }
-    NSLog(@"%@",definitions);
+    NSArray *definitions = nil;
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/lastDefinitions/page:%@.json",pageNumber];
+    definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions"];
+
     return definitions;
 }
 
