@@ -31,7 +31,7 @@
 + (NSArray *)mostPopularDefinitionsOnPage:(NSString*)pageNumber;
 + (NSArray *)mostRecentDefinitionsOnPage:(NSString*)pageNumber;
 + (NSDictionary *)definitionsForUser:(NSString *)userID;
-+ (NSDictionary *)definitionsForWord:(NSString *)wordID;
++ (NSDictionary *)definitionsForWord:(NSString *)word;
 + (NSDictionary *)randomSearch;
 
 @property (weak, nonatomic) id<CrowdDictionaryWebAPIDelegate> delegate;

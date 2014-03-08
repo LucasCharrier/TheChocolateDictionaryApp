@@ -27,7 +27,6 @@
     NSArray *definitions = nil;
     NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/mostPopularDefinitions/page:%@.json",pageNumber];
     definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions"];
-    NSLog(@"kikou la définition : %@", definitions);
     return definitions;
 }
 
@@ -55,9 +54,9 @@
     return definitions;
 }
 
-+ (NSDictionary *)definitionsForWord:(NSString *)wordID
++ (NSArray *)definitionsForWordId:(NSString *)wordID
 {
-    NSDictionary *definitions = nil;
+    NSArray *definitions = nil;
     //NSString *wordID = [word objectForKey:CROWD_DICTIONARY_WORD_ID];
     if (wordID) {
         NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/words/show/%@", wordID];
@@ -66,6 +65,31 @@
             [definition setObject:wordID forKey:CROWD_DICTIONARY_WORD_ID];
         }
     }
+    return definitions;
+}
+
++ (NSDictionary *)definitionsForWord:(NSString *)word
+{
+    NSDictionary *definitions = nil;
+
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/search/politique.json"];
+    definitions = [self executeCrowdDictionaryFetch:request] ;
+    return definitions;
+}
+
++ (NSArray *)definitionsForTag:(NSString *)tag{
+    NSArray *definitions = nil;
+    //NSString *wordID = [word objectForKey:CROWD_DICTIONARY_WORD_ID];
+    /*if (tag) {
+        NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/words/show/%@", word];
+        definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions.definition"];
+        for (NSMutableDictionary *definition in definitions) {
+            [definition setObject:tag forKey:CROWD_DICTIONARY_WORD_ID];
+        }
+    }*/
+   // NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/words/show/%@", word];
+   // definitions = [[self executeCrowdDictionaryFetch:request] valueForKeyPath:@"definitions"];
+    
     return definitions;
 }
 

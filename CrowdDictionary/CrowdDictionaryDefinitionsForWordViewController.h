@@ -10,8 +10,8 @@
 #import "CrowdDictionaryWebAPI.h"
 #define DEFITNITIONS_FOR_WORD @"DefinitionsForWord"
 
-@interface CrowdDictionaryDefinitionsForWordViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+@interface CrowdDictionaryDefinitionsForWordViewController : UITableViewController
+<UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate>
 @property (nonatomic,strong) NSDictionary* definitionsForWord;
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchWord;

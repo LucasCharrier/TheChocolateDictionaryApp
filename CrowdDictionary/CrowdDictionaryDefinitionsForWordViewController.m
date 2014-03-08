@@ -40,7 +40,8 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self loadDefinitionsForWord];
+    self.searchWord.delegate = self;
+    NSLog(@"awakeFromNib");
     
 }
 
@@ -54,18 +55,22 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return [self.definitionsForWord count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.definitionsForWord count];
+    
+    if(section == 1)
+        return [[self.definitionsForWord valueForKey:@"tags"] count];
+    else
+        return [[self.definitionsForWord valueForKey:@"words"] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 0;
+    return 15;
 }
 
 - (float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,16 +82,23 @@
 {
     static NSString *CellIdentifier = @"Definitions For Word";
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSArray* definition = nil;
     
+    if(indexPath.row < [[self.definitionsForWord valueForKey:@"tags"] count] ){
+        definition = [[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:indexPath.row];
+    }else{
+        definition = [[self.definitionsForWord valueForKey:@"words"] objectAtIndex:indexPath.row];
+    }
     //NSLog(@"%@",self.definitionsForWord);
     
     // Configure the cell...
-    cell.word.text =  [self.definitionsForWord valueForKeyPath:@"Word.name"];
-    cell.definition.text = [self.definitionsForWord valueForKeyPath:@"Definition.definition"];
-    cell.example.text = [self.definitionsForWord valueForKeyPath:@"Definition.exemple"];
-    cell.points.text = [self.definitionsForWord valueForKeyPath:@"Definition.points"];
-    cell.username.text = [self.definitionsForWord valueForKeyPath:@"User.username"];
-    cell.date.text = [self.definitionsForWord valueForKeyPath:@"Definition.created"];
+    NSLog(@"the defintiion %@",definition);
+   // cell.word.text =  [definition valueForKeyPath:@"Word.name"];
+    cell.definition.text = [definition valueForKeyPath:@"Definition.definition"];
+    cell.example.text = [definition valueForKeyPath:@"Definition.exemple"];
+    cell.points.text = [definition valueForKeyPath:@"Definition.points"];
+    cell.username.text = [definition valueForKeyPath:@"User.username"];
+    cell.date.text = [definition valueForKeyPath:@"Definition.created"];
     cell.tags.text = @" ";
     
     for(NSArray* tag in [self.definitionsForWord valueForKeyPath:@"DefinitionTag.Tag"]){
@@ -96,8 +108,17 @@
     return cell;
 }
 
+
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    NSLog(@"searchBar SearchBUtton has been clicked");
+   
+    [searchBar resignFirstResponder];
+    self.definitionsForWord = [CrowdDictionaryWebAPI definitionsForWord:searchBar.text];
+     NSLog(@"searchBarSearchButtonClicked%@",self.definitionsForWord);
+    [self.tableView reloadData];
 }
+
+
+
 
 @end
