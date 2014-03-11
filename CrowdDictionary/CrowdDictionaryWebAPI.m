@@ -34,7 +34,6 @@
 {
     NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/randomSearch.json"];
     NSDictionary *tmp = [self executeCrowdDictionaryFetch:request];
-    NSLog(@"ici le contenu %@",[tmp valueForKeyPath:@"definition"]);
     return [tmp valueForKeyPath:@"definition"];
     
 }
@@ -72,7 +71,7 @@
 {
     NSDictionary *definitions = nil;
 
-    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/search/politique.json"];
+    NSString *request = [NSString stringWithFormat:@"http://www.thechocolatedictionary.com/definitions/search/%@.json",word];
     definitions = [self executeCrowdDictionaryFetch:request] ;
     return definitions;
 }

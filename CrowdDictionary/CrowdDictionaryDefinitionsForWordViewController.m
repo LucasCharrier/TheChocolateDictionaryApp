@@ -41,32 +41,46 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     self.searchWord.delegate = self;
-    NSLog(@"awakeFromNib");
-    
 }
 
 - (void)loadDefinitionsForWord{
     self.definitionsForWord = [CrowdDictionaryWebAPI definitionsForWord:self.searchWord.text];
-    NSLog(@"kikou : %@",self.definitionsForWord );
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return [self.definitionsForWord count];
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    
-    if(section == 1)
-        return [[self.definitionsForWord valueForKey:@"tags"] count];
-    else
-        return [[self.definitionsForWord valueForKey:@"words"] count];
+    NSLog(@" section %d",section);
+    if(section == 0){
+        if([[self.definitionsForWord valueForKey:@"tags"] count]){
+            return [[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] count];
+        ;
+        }
+        return 0;
+    }else{
+        NSLog(@" this is section 1");
+        if([[self.definitionsForWord valueForKey:@"words"] count]){
+            return [[[self.definitionsForWord valueForKey:@"words"] objectAtIndex:0] count];
+        }
+        return 0;
+    }
+ 
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        return @"tags";
+    }else{
+        return @"words";
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -84,27 +98,33 @@
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSArray* definition = nil;
     
-    if(indexPath.row < [[self.definitionsForWord valueForKey:@"tags"] count] ){
-        definition = [[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:indexPath.row];
+
+        if(indexPath.row < [[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] count] ){
+            definition = [[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] objectAtIndex:indexPath.row];
+            NSLog(@"definition for cell %d : %@", indexPath.row,[[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] objectAtIndex:indexPath.row]);
+        }else{
+            if([[self.definitionsForWord valueForKey:@"words"] count]){
+                definition = [[[self.definitionsForWord valueForKey:@"words"]objectAtIndex:0] objectAtIndex:indexPath.row - [[self.definitionsForWord valueForKey:@"tags"] count]];
+            ;
+            }
+        }
+
+    if(definition){
+    // Configure the cell..
+        cell.word.text =  [definition  valueForKeyPath:@"Word.name"];
+        cell.definition.text = [definition valueForKeyPath:@"Definition.definition"];
+        cell.example.text = [definition  valueForKeyPath:@"Definition.exemple"];
+        cell.points.text = [definition  valueForKeyPath:@"Definition.points"];
+        cell.username.text = [definition valueForKeyPath:@"User.username"];
+        cell.date.text = [definition valueForKeyPath:@"Definition.created"];
+        cell.tags.text = @" ";
+    
+        for(NSArray* tag in [definition valueForKeyPath:@"DefinitionTag.Tag"]){
+            cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
+        }
     }else{
-        definition = [[self.definitionsForWord valueForKey:@"words"] objectAtIndex:indexPath.row];
+        
     }
-    //NSLog(@"%@",self.definitionsForWord);
-    
-    // Configure the cell...
-    NSLog(@"the defintiion %@",definition);
-   // cell.word.text =  [definition valueForKeyPath:@"Word.name"];
-    cell.definition.text = [definition valueForKeyPath:@"Definition.definition"];
-    cell.example.text = [definition valueForKeyPath:@"Definition.exemple"];
-    cell.points.text = [definition valueForKeyPath:@"Definition.points"];
-    cell.username.text = [definition valueForKeyPath:@"User.username"];
-    cell.date.text = [definition valueForKeyPath:@"Definition.created"];
-    cell.tags.text = @" ";
-    
-    for(NSArray* tag in [self.definitionsForWord valueForKeyPath:@"DefinitionTag.Tag"]){
-        cell.tags.text = [[cell.tags.text stringByAppendingString: [tag valueForKeyPath:@"name"]]stringByAppendingString:@" "];
-    }
-    
     return cell;
 }
 

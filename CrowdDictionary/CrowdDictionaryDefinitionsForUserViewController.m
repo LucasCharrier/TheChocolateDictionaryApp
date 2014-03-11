@@ -44,8 +44,6 @@
 
 - (void)loadMostPopularDefinition{
     self.definitionsForUser = [CrowdDictionaryWebAPI definitionsForUser:self.userID];
-    NSLog(@"kikou : %@",self.definitionsForUser );
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -75,8 +73,6 @@
 {
     static NSString *CellIdentifier = @"Definitions For User";
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    //NSLog(@"%@",self.DefinitionsForUser);
     
     // Configure the cell...
     cell.word.text =  [self.definitionsForUser valueForKeyPath:@"Word.name"];

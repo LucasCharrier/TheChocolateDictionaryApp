@@ -32,8 +32,7 @@
     /* multiphreading, we are creating a new phread in order to not blocked the application while we download the images */
     dispatch_async(downloadQueue, ^{
         NSArray* mostPopularDefinitions = [[NSUserDefaults standardUserDefaults] objectForKey:MOST_POPULAR_DEFINITIONS];
-        
-        NSLog(@"%@",mostPopularDefinitions);
+
         dispatch_async(dispatch_get_main_queue(), ^{
             /* once we finished downloading the images we come back to the main thread to put these new photos */
             self.navigationItem.rightBarButtonItem = sender;
@@ -51,8 +50,6 @@
 
 - (void)loadMostRecentDefinition{
     self.mostPopularDefinitions = [CrowdDictionaryWebAPI mostPopularDefinitionsOnPage:@"1"];
-    NSLog(@"kikou : %@",self.mostPopularDefinitions );
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -82,9 +79,6 @@
 {
     static NSString *CellIdentifier = @"Most Popular Definitions";
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // NSLog(@"bonjour les gens %@",self.mostRecentDefinitions);
-    
     
     NSDictionary* definition = [self.mostPopularDefinitions objectAtIndex:indexPath.row];
     
@@ -127,7 +121,6 @@
         if(moreDefinition){
             self.currentPage = [NSString stringWithFormat:@"%d", [self.currentPage intValue] + 1];
             self.mostPopularDefinitions = [self.mostPopularDefinitions arrayByAddingObjectsFromArray:moreDefinition];
-            NSLog(@"%@",self.mostPopularDefinitions);
             [self.tableView reloadData];
         }
         
