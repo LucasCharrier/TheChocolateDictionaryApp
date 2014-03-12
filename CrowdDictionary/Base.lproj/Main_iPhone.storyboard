@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2Im-Ch-xDU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CFl-cy-nC2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Crowd Dictionary Most Recent Definitions View Controller-->
+        <!--Crowd Dictionary Most Recent Definitions View Controller - ACCUEIL-->
         <scene sceneID="ud8-gQ-VRP">
             <objects>
                 <viewController id="yLX-1q-cUK" customClass="CrowdDictionaryMostRecentDefinitionsViewController" sceneMemberID="viewController">
@@ -15,11 +15,11 @@
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="Most Recent Definitions" rowHeight="377" id="ubN-du-caF" customClass="CrowdDictionaryTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="Most Recent Definitions" rowHeight="377" id="ubN-du-caF" customClass="CrowdDictionaryTableViewCell">
                                 <rect key="frame" x="0.0" y="119" width="320" height="377"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ubN-du-caF" id="m1m-NR-CVd">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="376"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="376"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJe-EB-tq6">
@@ -119,6 +119,7 @@
                                     <outlet property="unlike" destination="EeY-Au-2Qf" id="jHw-dD-lyO"/>
                                     <outlet property="username" destination="TzO-vc-yaf" id="zwo-ga-vup"/>
                                     <outlet property="word" destination="FH0-96-FeC" id="cxy-P1-ZEy"/>
+                                    <segue destination="gjK-4a-25A" kind="push" identifier="search" id="7v7-22-mPJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -127,32 +128,25 @@
                             <outlet property="delegate" destination="YcX-im-85L" id="MRf-2A-cbn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="glyphicons_020_home.png" id="vYV-9P-LKG"/>
+                    <navigationItem key="navigationItem" title="ACCUEIL" id="cXB-ML-mbu">
+                        <barButtonItem key="backBarButtonItem" title="  " id="FPZ-Vk-Zhk"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Glq-OS-k3o" kind="push" identifier="edit" id="uLD-kU-dhv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VP-ZT-pnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1469" y="564"/>
+            <point key="canvasLocation" x="1164" y="941"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="U5V-QL-2KM">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="2Im-Ch-xDU" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EX7-wT-41W">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="CFl-cy-nC2" kind="relationship" relationship="rootViewController" id="1Gp-rz-6A9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="757-y8-NJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-264" y="744"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Crowd Dictionary Tab View Controller - COucou-->
         <scene sceneID="KHC-r6-1aW">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="CFl-cy-nC2" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="V9k-0O-cvf"/>
+                <tabBarController definesPresentationContext="YES" id="CFl-cy-nC2" customClass="CrowdDictionaryTabViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="COucou" id="V9k-0O-cvf">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="htr-nI-yas"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Sfw-PM-8wM"/>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="lyH-eu-AUa">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -160,18 +154,17 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="yLX-1q-cUK" kind="relationship" relationship="viewControllers" id="V07-Sa-F8i"/>
-                        <segue destination="Glq-OS-k3o" kind="relationship" relationship="viewControllers" id="bZ5-Vo-3S0"/>
-                        <segue destination="d4I-BK-xaE" kind="relationship" relationship="viewControllers" id="ytw-6b-bGQ"/>
-                        <segue destination="Omm-74-nWb" kind="relationship" relationship="viewControllers" id="9ru-2h-KFj"/>
-                        <segue destination="cbZ-7g-zvm" kind="relationship" relationship="viewControllers" id="tIU-MK-bvV"/>
+                        <segue destination="rWi-Sk-haD" kind="relationship" relationship="viewControllers" id="V07-Sa-F8i"/>
+                        <segue destination="Tmk-iH-HsF" kind="relationship" relationship="viewControllers" id="9ru-2h-KFj"/>
+                        <segue destination="lfK-ZO-9lc" kind="relationship" relationship="viewControllers" id="NuE-zy-aCc"/>
+                        <segue destination="tO0-bJ-z5R" kind="relationship" relationship="viewControllers" id="CwV-hx-RFW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARQ-XQ-muI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="769"/>
+            <point key="canvasLocation" x="43" y="617"/>
         </scene>
-        <!--Crowd Dictionary Random Definition-->
+        <!--Crowd Dictionary Random Definition - AU HASARD-->
         <scene sceneID="Av7-f2-b9c">
             <objects>
                 <tableViewController id="YcX-im-85L" customClass="CrowdDictionaryRandomDefinition" sceneMemberID="viewController">
@@ -294,13 +287,19 @@
                             <outlet property="delegate" destination="YcX-im-85L" id="tMj-P8-tAi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="lhh-EF-dmq"/>
+                    <navigationItem key="navigationItem" title="AU HASARD" id="lhh-EF-dmq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="TVK-AK-4Zw"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="gjK-4a-25A" kind="push" identifier="search" id="Vdo-xQ-yEl"/>
+                        <segue destination="Glq-OS-k3o" kind="push" identifier="edit" id="QxO-cM-DoV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYV-qQ-quh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1734"/>
+            <point key="canvasLocation" x="1199" y="2340"/>
         </scene>
-        <!--Crowd Dictionary Most Popular Definition View Controller-->
+        <!--Crowd Dictionary Most Popular Definition View Controller - + POPULAIRES-->
         <scene sceneID="lK6-X0-047">
             <objects>
                 <viewController id="Omm-74-nWb" customClass="CrowdDictionaryMostPopularDefinitionViewController" sceneMemberID="viewController">
@@ -423,11 +422,17 @@
                             <outlet property="delegate" destination="YcX-im-85L" id="cpa-mN-kxf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="glyphicons_347_hand_up.png" id="xHo-0F-ONP"/>
+                    <navigationItem key="navigationItem" title="+ POPULAIRES" id="IuR-iK-jeW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="URc-jp-koN"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="gjK-4a-25A" kind="push" identifier="search" id="aWi-B1-OhU"/>
+                        <segue destination="Glq-OS-k3o" kind="push" identifier="edit" id="Raf-zW-eCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyp-9o-xfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="744"/>
+            <point key="canvasLocation" x="1154" y="1648"/>
         </scene>
         <!--Crowd Dictionary Definitions For Word View Controller-->
         <scene sceneID="OCg-UK-zpb">
@@ -439,17 +444,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Wgt-fv-7FE">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="gjK-4a-25A" id="0Mt-mf-9e2"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="Definitions For Word" rowHeight="377" id="HEH-27-7ZT" customClass="CrowdDictionaryTableViewCell">
-                                <rect key="frame" x="0.0" y="163" width="320" height="377"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="377"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HEH-27-7ZT" id="mAa-JQ-GS8">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="376"/>
@@ -560,15 +557,14 @@
                             <outlet property="delegate" destination="gjK-4a-25A" id="iAH-Rd-VuJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6Fu-o4-AzW"/>
-                    <connections>
-                        <outlet property="searchWord" destination="Wgt-fv-7FE" id="Apx-I4-jo1"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="Bmy-sx-9Zp">
+                        <barButtonItem key="leftBarButtonItem" id="dXB-si-Rg6"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCO-Up-rkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="2qy-7S-tKP"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="2161"/>
+            <point key="canvasLocation" x="1760" y="1713"/>
         </scene>
         <!--Crowd Dictionary Add Definition For Word View Controller-->
         <scene sceneID="gIT-6K-I1E">
@@ -613,7 +609,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="glyphicons_030_pencil.png" id="wRn-rW-pUL"/>
+                    <navigationItem key="navigationItem" id="ssr-se-PRs"/>
                     <connections>
                         <outlet property="definition" destination="drr-kH-JJ1" id="thm-iW-2T6"/>
                         <outlet property="example" destination="6Gc-5R-MTd" id="UHC-Sg-Vp7"/>
@@ -623,53 +619,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNO-tD-cwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651" y="1442"/>
+            <point key="canvasLocation" x="1781" y="957"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="JZU-IB-mAV">
+        <!--View Controller - MOI-->
+        <scene sceneID="Lpg-SA-7Ml">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbZ-7g-zvm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="glyphicons_083_random.png" id="bFE-zJ-e5N">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                    </tabBarItem>
+                <viewController id="bFV-DI-1zr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKc-Uy-aAV"/>
+                        <viewControllerLayoutGuide type="bottom" id="82K-2G-VkZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iBn-cW-B5j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MOI" id="pgH-Cm-IRM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcU-b8-vzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="3018"/>
+        </scene>
+        <!--Navigation Controller - Au hasard-->
+        <scene sceneID="caG-7C-TrT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lfK-ZO-9lc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Au hasard" image="glyphicons_083_random.png" id="Oyx-PW-H3t"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9sX-ys-e0W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rAr-Iv-FOu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="YcX-im-85L" kind="relationship" relationship="rootViewController" id="r68-Kr-T3P"/>
+                        <segue destination="YcX-im-85L" kind="relationship" relationship="rootViewController" id="FEb-ZN-qBm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MZE-G3-rPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anK-Cn-aZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="1734"/>
+            <point key="canvasLocation" x="663" y="2334"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="que-ie-KbM">
+        <!--Navigation Controller - + populaire-->
+        <scene sceneID="kkD-FO-RFg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d4I-BK-xaE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="glyphicons_027_search.png" id="mXS-XW-YMv"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tmk-iH-HsF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="+ populaire" image="glyphicons_347_hand_up.png" id="xHo-0F-ONP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GeV-Gx-dcw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c9J-O2-htw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gjK-4a-25A" kind="relationship" relationship="rootViewController" id="kqu-oO-BSM"/>
+                        <segue destination="Omm-74-nWb" kind="relationship" relationship="rootViewController" id="9BU-CA-uLx"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IbR-kQ-7b4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwW-pV-8h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186" y="2161"/>
+            <point key="canvasLocation" x="676" y="1628"/>
+        </scene>
+        <!--Navigation Controller - Accueil-->
+        <scene sceneID="rdG-yq-0qW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rWi-Sk-haD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Accueil" image="glyphicons_020_home.png" id="vYV-9P-LKG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qiK-0u-1x1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yLX-1q-cUK" kind="relationship" relationship="rootViewController" id="NPg-kb-RhT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6R-Pk-4Ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="928"/>
+        </scene>
+        <!--Navigation Controller - Moi-->
+        <scene sceneID="pVR-gP-v1w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tO0-bJ-z5R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Moi" image="glyphicons_003_user.png" id="Ag2-Ns-vWP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ijO-5S-crQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bFV-DI-1zr" kind="relationship" relationship="rootViewController" id="4Cb-VL-mDG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9W-2b-pag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="3018"/>
         </scene>
     </scenes>
     <resources>
+        <image name="glyphicons_003_user.png" width="23" height="22"/>
         <image name="glyphicons_020_home.png" width="27" height="26"/>
-        <image name="glyphicons_027_search.png" width="24" height="24"/>
-        <image name="glyphicons_030_pencil.png" width="24" height="24"/>
         <image name="glyphicons_066_tags.png" width="30" height="24"/>
         <image name="glyphicons_083_random.png" width="28" height="20"/>
         <image name="glyphicons_343_thumbs_up.png" width="24" height="21"/>
@@ -681,4 +731,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="7v7-22-mPJ"/>
+        <segue reference="uLD-kU-dhv"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650AAA0218CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */; };
+		650AAA0318CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */; };
 		652DAC1D18A1CA0700287F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC1C18A1CA0700287F15 /* Foundation.framework */; };
 		652DAC1F18A1CA0700287F15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC1E18A1CA0700287F15 /* CoreGraphics.framework */; };
 		652DAC2118A1CA0700287F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC2018A1CA0700287F15 /* UIKit.framework */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650AAA0018CF880800527C0D /* CrowdDictionaryTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryTabViewController.h; sourceTree = "<group>"; };
+		650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTabViewController.m; sourceTree = "<group>"; };
 		652DAC1918A1CA0700287F15 /* CrowdDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		652DAC1C18A1CA0700287F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		652DAC1E18A1CA0700287F15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +152,8 @@
 		652DAC1018A1CA0700287F15 = {
 			isa = PBXGroup;
 			children = (
+				650AAA0018CF880800527C0D /* CrowdDictionaryTabViewController.h */,
+				650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */,
 				652DAC2218A1CA0700287F15 /* CrowdDictionary */,
 				652DAC4718A1CA0700287F15 /* CrowdDictionaryTests */,
 				652DAC1B18A1CA0700287F15 /* Frameworks */,
@@ -448,6 +454,7 @@
 				6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 				65797EC318C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.m in Sources */,
 				6567364F18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
+				650AAA0218CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */,
 				6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC2918A1CA0700287F15 /* main.m in Sources */,
 				6567365B18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
@@ -458,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650AAA0318CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */,
 				6567365C18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
 				6567365018BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
 				6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,

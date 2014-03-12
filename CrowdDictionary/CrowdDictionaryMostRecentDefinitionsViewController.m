@@ -75,6 +75,8 @@
     return 380;
 }
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Most Recent Definitions";
@@ -126,6 +128,35 @@
         }
 
     }
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIBarButtonItem *editItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"glyphicons_030_pencil.png"] landscapeImagePhone:[UIImage imageNamed:@"glyphicons_030_pencil.png"] style:UIBarButtonItemStylePlain target:self action:nil];
+ 
+    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"glyphicons_027_search.png"] landscapeImagePhone:[UIImage imageNamed:@"glyphicons_027_search.png"] style:UIBarButtonItemStylePlain target:self action:nil];
+    /*UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];
+     searchBar.backgroundImage = [[UIImage alloc] init];
+     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:searchBar] ;
+     self.searchWord = searchBar;
+     searchBar.delegate = self;*/
+
+
+    
+    NSArray *actionButtonItems = @[editItem];
+    self.navigationItem.rightBarButtonItems = actionButtonItems;
+    self.navigationItem.leftBarButtonItem = searchItem;
+    [searchItem setAction:@selector(goToSearchViewController)];
+    [editItem setAction:@selector(goToEditViewController)];
+    
+}
+
+- (void)goToSearchViewController{
+    [self performSegueWithIdentifier:@"search" sender:self];
+}
+
+- (void)goToEditViewController{
+    [self performSegueWithIdentifier:@"edit" sender:self];
 }
 
 

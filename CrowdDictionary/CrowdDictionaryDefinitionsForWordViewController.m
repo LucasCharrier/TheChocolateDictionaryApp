@@ -37,9 +37,25 @@
     });
 }
 
+- (void)viewDidLoad{
+
+
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 260, 10)];
+    searchBar.backgroundImage = [[UIImage alloc] init];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:searchBar] ;
+    self.searchWord = searchBar;
+    self.searchWord.placeholder = @"rechercher une définition";
+    [self.searchWord setTintColor:[UIColor darkTextColor]];
+    searchBar.delegate = self;
+    
+    self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem;
+    [self.navigationItem.leftBarButtonItem setTitle:@" "];
+    
+}
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    
     self.searchWord.delegate = self;
 }
 
@@ -84,7 +100,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 15;
+    return 45;
 }
 
 - (float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,10 +114,11 @@
     CrowdDictionaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSArray* definition = nil;
     
-
-        if(indexPath.row < [[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] count] ){
-            definition = [[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] objectAtIndex:indexPath.row];
-            NSLog(@"definition for cell %d : %@", indexPath.row,[[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] objectAtIndex:indexPath.row]);
+        if([[self.definitionsForWord valueForKey:@"tags"] count]){
+            if(indexPath.row < [[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] count] ){
+                definition = [[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] objectAtIndex:indexPath.row];
+                NSLog(@"definition for cell %d : %@", indexPath.row,[[[self.definitionsForWord valueForKey:@"tags"] objectAtIndex:0] objectAtIndex:indexPath.row]);
+            }
         }else{
             if([[self.definitionsForWord valueForKey:@"words"] count]){
                 definition = [[[self.definitionsForWord valueForKey:@"words"]objectAtIndex:0] objectAtIndex:indexPath.row - [[self.definitionsForWord valueForKey:@"tags"] count]];
