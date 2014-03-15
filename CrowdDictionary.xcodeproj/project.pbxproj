@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		650AAA0218CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */; };
-		650AAA0318CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */; };
+		6510593918D0F138001A555A /* CrowdDictionaryTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593818D0F138001A555A /* CrowdDictionaryTextView.m */; };
+		6510593A18D0F138001A555A /* CrowdDictionaryTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593818D0F138001A555A /* CrowdDictionaryTextView.m */; };
+		6510593C18D0F3C1001A555A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6510593B18D0F3C1001A555A /* QuartzCore.framework */; };
+		6510593F18D0F659001A555A /* CrowdDictionaryTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593E18D0F659001A555A /* CrowdDictionaryTextField.m */; };
+		6510594018D0F659001A555A /* CrowdDictionaryTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593E18D0F659001A555A /* CrowdDictionaryTextField.m */; };
 		652DAC1D18A1CA0700287F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC1C18A1CA0700287F15 /* Foundation.framework */; };
 		652DAC1F18A1CA0700287F15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC1E18A1CA0700287F15 /* CoreGraphics.framework */; };
 		652DAC2118A1CA0700287F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC2018A1CA0700287F15 /* UIKit.framework */; };
@@ -71,8 +74,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		650AAA0018CF880800527C0D /* CrowdDictionaryTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryTabViewController.h; sourceTree = "<group>"; };
-		650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTabViewController.m; sourceTree = "<group>"; };
+		6510593718D0F137001A555A /* CrowdDictionaryTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryTextView.h; path = ../CrowdDictionaryTextView.h; sourceTree = "<group>"; };
+		6510593818D0F138001A555A /* CrowdDictionaryTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryTextView.m; path = ../CrowdDictionaryTextView.m; sourceTree = "<group>"; };
+		6510593B18D0F3C1001A555A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6510593D18D0F659001A555A /* CrowdDictionaryTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryTextField.h; path = ../../CrowdDictionaryTextField.h; sourceTree = "<group>"; };
+		6510593E18D0F659001A555A /* CrowdDictionaryTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryTextField.m; path = ../../CrowdDictionaryTextField.m; sourceTree = "<group>"; };
 		652DAC1918A1CA0700287F15 /* CrowdDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		652DAC1C18A1CA0700287F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		652DAC1E18A1CA0700287F15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,8 +109,8 @@
 		6567366118BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_344_thumbs_down.png; sourceTree = "<group>"; };
 		6567366218BFF89700BBE3A2 /* glyphicons_345_hand_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_345_hand_right.png; sourceTree = "<group>"; };
 		6567366318BFF89700BBE3A2 /* glyphicons_346_hand_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_346_hand_left.png; sourceTree = "<group>"; };
-		6567366C18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryTableViewCell.h; sourceTree = "<group>"; };
-		6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryTableViewCell.m; sourceTree = "<group>"; };
+		6567366C18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryTableViewCell.h; path = ../CrowdDictionaryTableViewCell.h; sourceTree = "<group>"; };
+		6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryTableViewCell.m; path = ../CrowdDictionaryTableViewCell.m; sourceTree = "<group>"; };
 		65797EC118C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryAddDefinitionForWordViewController.h; sourceTree = "<group>"; };
 		65797EC218C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdDictionaryAddDefinitionForWordViewController.m; sourceTree = "<group>"; };
 		658AD6BA18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdDictionaryDefinitionsForWordViewController.h; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6510593C18D0F3C1001A555A /* QuartzCore.framework in Frameworks */,
 				652DAC1F18A1CA0700287F15 /* CoreGraphics.framework in Frameworks */,
 				652DAC2118A1CA0700287F15 /* UIKit.framework in Frameworks */,
 				652DAC1D18A1CA0700287F15 /* Foundation.framework in Frameworks */,
@@ -149,11 +156,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6510594118D20909001A555A /* Shared Element */ = {
+			isa = PBXGroup;
+			children = (
+				6510593718D0F137001A555A /* CrowdDictionaryTextView.h */,
+				6510593818D0F138001A555A /* CrowdDictionaryTextView.m */,
+				6510593D18D0F659001A555A /* CrowdDictionaryTextField.h */,
+				6510593E18D0F659001A555A /* CrowdDictionaryTextField.m */,
+				6567366C18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.h */,
+				6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */,
+			);
+			name = "Shared Element";
+			path = CrowdDictionaryIcon;
+			sourceTree = "<group>";
+		};
+		6510594218D20951001A555A /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				652DAC2E18A1CA0700287F15 /* Main_iPhone.storyboard */,
+				652DAC3118A1CA0700287F15 /* Main_iPad.storyboard */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		6510594318D20977001A555A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */,
+				6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */,
+				6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		6510594418D20990001A555A /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				652DAC2C18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m */,
+				652DAC2B18A1CA0700287F15 /* CrowdDictionaryAppDelegate.h */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
 		652DAC1018A1CA0700287F15 = {
 			isa = PBXGroup;
 			children = (
-				650AAA0018CF880800527C0D /* CrowdDictionaryTabViewController.h */,
-				650AAA0118CF880800527C0D /* CrowdDictionaryTabViewController.m */,
 				652DAC2218A1CA0700287F15 /* CrowdDictionary */,
 				652DAC4718A1CA0700287F15 /* CrowdDictionaryTests */,
 				652DAC1B18A1CA0700287F15 /* Frameworks */,
@@ -173,6 +220,7 @@
 		652DAC1B18A1CA0700287F15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6510593B18D0F3C1001A555A /* QuartzCore.framework */,
 				652DAC1C18A1CA0700287F15 /* Foundation.framework */,
 				652DAC1E18A1CA0700287F15 /* CoreGraphics.framework */,
 				652DAC2018A1CA0700287F15 /* UIKit.framework */,
@@ -184,22 +232,17 @@
 		652DAC2218A1CA0700287F15 /* CrowdDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				65797EC018C6AECF0052CAD6 /* Add Definition For Word */,
 				6567365E18BFF76600BBE3A2 /* Resources */,
+				65797EC018C6AECF0052CAD6 /* Add Definition For Word */,
 				658AD6B918C385960021B48A /* Definitions For Word */,
 				6567365818BF95C200BBE3A2 /* Definitions For User */,
 				6567365318BF94D800BBE3A2 /* Most Popular Definitions */,
 				6567365218BF94C700BBE3A2 /* Most Recent Definitions */,
 				6567365118BF94AD00BBE3A2 /* Random Definition */,
-				652DAC2B18A1CA0700287F15 /* CrowdDictionaryAppDelegate.h */,
-				6567366C18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.h */,
-				6567366D18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m */,
-				652DAC2C18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m */,
-				652DAC2E18A1CA0700287F15 /* Main_iPhone.storyboard */,
-				652DAC3118A1CA0700287F15 /* Main_iPad.storyboard */,
-				6544FF2A18AD875E00F7D420 /* CrowdDictionaryWebAPI.h */,
-				6544FF2B18AD875E00F7D420 /* CrowdDictionaryWebAPI.m */,
-				6590CF0E18B2820C0001CC9E /* CrowdDictionaryWebAPIDelegate.h */,
+				6510594118D20909001A555A /* Shared Element */,
+				6510594418D20990001A555A /* App Delegate */,
+				6510594218D20951001A555A /* Layout */,
+				6510594318D20977001A555A /* API */,
 				652DAC3A18A1CA0700287F15 /* Images.xcassets */,
 				652DAC2318A1CA0700287F15 /* Supporting Files */,
 			);
@@ -452,9 +495,10 @@
 				658AD6BC18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */,
 				652DAC2D18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m in Sources */,
 				6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
+				6510593F18D0F659001A555A /* CrowdDictionaryTextField.m in Sources */,
+				6510593918D0F138001A555A /* CrowdDictionaryTextView.m in Sources */,
 				65797EC318C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.m in Sources */,
 				6567364F18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
-				650AAA0218CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */,
 				6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC2918A1CA0700287F15 /* main.m in Sources */,
 				6567365B18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
@@ -465,16 +509,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				650AAA0318CF880800527C0D /* CrowdDictionaryTabViewController.m in Sources */,
 				6567365C18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
 				6567365018BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
 				6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */,
 				6567366F18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */,
+				6510593A18D0F138001A555A /* CrowdDictionaryTextView.m in Sources */,
 				6567365718BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */,
 				6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 				658AD6BD18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */,
 				65797EC418C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.m in Sources */,
+				6510594018D0F659001A555A /* CrowdDictionaryTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

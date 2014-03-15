@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CrowdDictionaryAddDefinitionForWordViewController : UIViewController
+@interface CrowdDictionaryAddDefinitionForWordViewController : UIViewController <UITextFieldDelegate,UITextViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *word;
 @property (strong, nonatomic) IBOutlet UITextView *definition;
 @property (strong, nonatomic) IBOutlet UITextField *tags;
 @property (strong, nonatomic) IBOutlet UITextView *example;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *okButton;
+@property (strong, nonatomic) IBOutlet UILabel *definitionPlaceholder;
+@property (strong, nonatomic) IBOutlet UILabel *exemplePlaceholder;
+@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
