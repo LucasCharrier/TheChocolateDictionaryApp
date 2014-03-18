@@ -616,14 +616,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOg-Ym-W7r">
-                                <rect key="frame" x="0.0" y="387" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem systemItem="add" id="Cex-9h-tmX"/>
-                                    <barButtonItem systemItem="compose" id="PeG-Ch-pUo"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -637,7 +629,6 @@
                         <outlet property="exemplePlaceholder" destination="lJX-9M-Xyl" id="xzT-7i-4F5"/>
                         <outlet property="okButton" destination="lHY-NO-R7R" id="JqE-3E-xOk"/>
                         <outlet property="tags" destination="Vav-8r-ZIp" id="yHX-Tc-qfF"/>
-                        <outlet property="toolbar" destination="ZOg-Ym-W7r" id="Bip-q6-HzP"/>
                         <outlet property="word" destination="xLB-Ty-kUL" id="NfE-AH-TFl"/>
                         <segue destination="Kyy-Me-eO1" kind="push" identifier="send" id="s4z-bJ-fkF"/>
                     </connections>

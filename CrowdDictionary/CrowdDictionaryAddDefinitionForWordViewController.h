@@ -16,6 +16,4 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *okButton;
 @property (strong, nonatomic) IBOutlet UILabel *definitionPlaceholder;
 @property (strong, nonatomic) IBOutlet UILabel *exemplePlaceholder;
-@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
-
 @end

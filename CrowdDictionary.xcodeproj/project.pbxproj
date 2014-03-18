@@ -12,6 +12,7 @@
 		6510593C18D0F3C1001A555A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6510593B18D0F3C1001A555A /* QuartzCore.framework */; };
 		6510593F18D0F659001A555A /* CrowdDictionaryTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593E18D0F659001A555A /* CrowdDictionaryTextField.m */; };
 		6510594018D0F659001A555A /* CrowdDictionaryTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593E18D0F659001A555A /* CrowdDictionaryTextField.m */; };
+		652C8F2218D8B58E0060BEEA /* glyphicons_050_link.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C8F2118D8B58E0060BEEA /* glyphicons_050_link.png */; };
 		652DAC1D18A1CA0700287F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC1C18A1CA0700287F15 /* Foundation.framework */; };
 		652DAC1F18A1CA0700287F15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC1E18A1CA0700287F15 /* CoreGraphics.framework */; };
 		652DAC2118A1CA0700287F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652DAC2018A1CA0700287F15 /* UIKit.framework */; };
@@ -79,6 +80,7 @@
 		6510593B18D0F3C1001A555A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6510593D18D0F659001A555A /* CrowdDictionaryTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryTextField.h; path = ../../CrowdDictionaryTextField.h; sourceTree = "<group>"; };
 		6510593E18D0F659001A555A /* CrowdDictionaryTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryTextField.m; path = ../../CrowdDictionaryTextField.m; sourceTree = "<group>"; };
+		652C8F2118D8B58E0060BEEA /* glyphicons_050_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_050_link.png; path = ../../../../CrowdDictionaryIcon/glyphicons_050_link.png; sourceTree = "<group>"; };
 		652DAC1918A1CA0700287F15 /* CrowdDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		652DAC1C18A1CA0700287F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		652DAC1E18A1CA0700287F15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -352,6 +354,7 @@
 		65E14D4E18A29AF900E10F33 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				652C8F2118D8B58E0060BEEA /* glyphicons_050_link.png */,
 				6567366018BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png */,
 				6567366118BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png */,
 				6567366218BFF89700BBE3A2 /* glyphicons_345_hand_right.png */,
@@ -468,6 +471,7 @@
 				6567366618BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */,
 				6567366418BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */,
 				65E14D5E18A29AF900E10F33 /* glyphicons_065_tag.png in Resources */,
+				652C8F2218D8B58E0060BEEA /* glyphicons_050_link.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

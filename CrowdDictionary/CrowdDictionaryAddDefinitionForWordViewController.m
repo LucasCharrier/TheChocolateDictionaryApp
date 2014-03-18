@@ -54,8 +54,21 @@
     [self.exemplePlaceholder setFont:[UIFont fontWithName:@"Helvetica Neue" size:14]];
     
     [self.okButton setAction:@selector(tapOkButton)];
+    UIToolbar *toolbar = [[UIToolbar alloc] init];
+    toolbar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    [items addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil]];
+    [items addObject:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"glyphicons_050_link.png"] landscapeImagePhone:[UIImage imageNamed:@"glyphicons_050_link.png"] style:UIBarButtonItemStylePlain target:self action:nil]];
+    [items addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil]];
+    UIBarButtonItem* validateItem = [[UIBarButtonItem alloc] initWithTitle:@"Valider définition" style:UIBarButtonItemStylePlain target:self action:@selector(validationDefinition)];
+    [validateItem setAction:@selector(validationDefinition:)];
+    [items addObject:validateItem];
+    [toolbar setItems:items animated:NO];
+    [self.definition setInputAccessoryView:toolbar];
+    [self.example setInputAccessoryView:toolbar];
+    [self.word setInputAccessoryView:toolbar];
+    [self.tags setInputAccessoryView:toolbar];
     
-    [self.toolbar setHidden:TRUE];
     
 	// Do any additional setup after loading the view.
 }
@@ -84,28 +97,34 @@
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-/*
-    if(textField.tag == 1){
-         [self.navigationItem.rightBarButtonItem setTitle:@"+ Mot"];
-    }else{
-        [self.navigationItem.rightBarButtonItem setTitle:@"+ Tags"];
-    }
-    return true;*/
+
+
+        UIToolbar* atoolbar = (UIToolbar*)textField.inputAccessoryView;
+        UIBarButtonItem* item = [[atoolbar items] lastObject];
+        item.title =@"";
+        [item setEnabled:YES];
+
     if(![self.word.text isEqual:@""] && ![self.definition.text isEqual:@""] && ![self.example.text isEqual:@""]){
          [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithWhite: 1 alpha:1]];
     }else{
          [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithWhite: 1 alpha:0.6]];
     }
     
+ 
+    
     return true;
 }
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
-   /* if(textView.tag == 0){
-        [self.navigationItem.rightBarButtonItem setTitle:@"+ Définition"];
-    }else{
-        [self.navigationItem.rightBarButtonItem setTitle:@"+ Exemple"];
-    }
+   if(textView.tag == 2){
+        UIToolbar* atoolbar = (UIToolbar*)textView.inputAccessoryView;
+        UIBarButtonItem* item = [[atoolbar items] lastObject];
+        item.title =@"Valider exemple";
+   }else{
+       UIToolbar* atoolbar = (UIToolbar*)textView.inputAccessoryView;
+       UIBarButtonItem* item = [[atoolbar items] lastObject];
+       item.title =@"Valider définition";
+   }/*
     if(textView.text.length == 0){
          [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithWhite: 1 alpha:0.6]];
     }*/
@@ -114,6 +133,8 @@
     }else{
         [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithWhite: 1 alpha:0.6]];
     }
+    
+
     
     return true;
 }
@@ -201,70 +222,12 @@
 
 
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return NO;
+- (void) validationDefinition{
+    [self.definition resignFirstResponder];
 }
 
-- (void)keyboardWillShow:(NSNotification *)notification
-{
-    CGPoint beginCentre = [[[notification userInfo] valueForKey:UIKeyboardCenterBeginUserInfoKey] CGPointValue];
-    CGPoint endCentre = [[[notification userInfo] valueForKey:UIKeyboardCenterEndUserInfoKey] CGPointValue];
-    CGRect keyboardBounds = [[[notification userInfo] valueForKey:UIKeyboardBoundsUserInfoKey] CGRectValue];
-    UIViewAnimationCurve animationCurve = [[[notification userInfo] valueForKey:UIKeyboardAnimationCurveUserInfoKey] intValue];
-    NSTimeInterval animationDuration = [[[notification userInfo] valueForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    if (nil ==  self.toolbar) {
-        
-        if(nil ==  self.toolbar) {
-            self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,44)];
-             self.toolbar.barStyle = UIBarStyleBlackTranslucent;
-             self.toolbar.tintColor = [UIColor darkGrayColor];
-            
-            UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard:)];
-            UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-            
-            UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:
-                                                                                     NSLocalizedString(@"Previous",@"Previous form field"),
-                                                                                     NSLocalizedString(@"Next",@"Next form field"),
-                                                                                     nil]];
-            control.segmentedControlStyle = UISegmentedControlStyleBar;
-            control.tintColor = [UIColor darkGrayColor];
-            control.momentary = YES;
-            [control addTarget:self action:@selector(nextPrevious:) forControlEvents:UIControlEventValueChanged];
-            
-            UIBarButtonItem *controlItem = [[UIBarButtonItem alloc] initWithCustomView:control];
-            
-            
-            
-            
-            NSArray *items = [[NSArray alloc] initWithObjects:controlItem, flex, barButtonItem, nil];
-
-       
-            
-             self.toolbar.frame = CGRectMake(beginCentre.x - (keyboardBounds.size.width/2),
-                                               beginCentre.y - (keyboardBounds.size.height/2) -  self.toolbar.frame.size.height,
-                                                self.toolbar.frame.size.width,
-                                                self.toolbar.frame.size.height);
-            
-            [self.view addSubview: self.toolbar];
-        }
-    }
-    
-    [UIView beginAnimations:@"RS_showKeyboardAnimation" context:nil];
-    [UIView setAnimationCurve:animationCurve];
-    [UIView setAnimationDuration:animationDuration];
-    
-    self.toolbar.alpha = 1.0;
-    self.toolbar.frame = CGRectMake(endCentre.x - (keyboardBounds.size.width/2),
-                                       endCentre.y - (keyboardBounds.size.height/2) -  self.toolbar.frame.size.height - self.view.frame.origin.y,
-                                        self.toolbar.frame.size.width,
-                                       self.toolbar.frame.size.height);
-    
-    [UIView commitAnimations];    
-    
-    keyboardToolbarShouldHide = YES;
+- (void) validationExemple{
+    [self.definition resignFirstResponder];
 }
-
 
 @end
