@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="yLX-1q-cUK" customClass="CrowdDictionaryMostRecentDefinitionsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="377" sectionHeaderHeight="10" sectionFooterHeight="10" id="DaE-g8-3f6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,7 +119,7 @@
                                     <outlet property="unlike" destination="EeY-Au-2Qf" id="jHw-dD-lyO"/>
                                     <outlet property="username" destination="TzO-vc-yaf" id="zwo-ga-vup"/>
                                     <outlet property="word" destination="FH0-96-FeC" id="cxy-P1-ZEy"/>
-                                    <segue destination="gjK-4a-25A" kind="push" identifier="search" id="7v7-22-mPJ"/>
+                                    <segue destination="kRH-ho-Km7" kind="modal" identifier="edit" id="kkJ-GG-c7O"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -132,12 +132,12 @@
                         <barButtonItem key="backBarButtonItem" title="  " id="FPZ-Vk-Zhk"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="Glq-OS-k3o" kind="push" identifier="edit" id="uLD-kU-dhv"/>
+                        <segue destination="Glq-OS-k3o" kind="modal" identifier="edit2" id="uLD-kU-dhv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VP-ZT-pnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="999"/>
+            <point key="canvasLocation" x="1117" y="1020"/>
         </scene>
         <!--Tab Bar Controller - COucou-->
         <scene sceneID="KHC-r6-1aW">
@@ -169,7 +169,7 @@
             <objects>
                 <tableViewController id="YcX-im-85L" customClass="CrowdDictionaryRandomDefinition" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="377" sectionHeaderHeight="10" sectionFooterHeight="10" id="blc-4h-ywL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,7 +304,7 @@
             <objects>
                 <viewController id="Omm-74-nWb" customClass="CrowdDictionaryMostPopularDefinitionViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="377" sectionHeaderHeight="10" sectionFooterHeight="10" id="Gbf-yr-jrt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -432,14 +432,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyp-9o-xfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="1648"/>
+            <point key="canvasLocation" x="1108" y="1693"/>
         </scene>
         <!--Crowd Dictionary Definitions For Word View Controller-->
         <scene sceneID="OCg-UK-zpb">
             <objects>
                 <viewController id="gjK-4a-25A" customClass="CrowdDictionaryDefinitionsForWordViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="377" sectionHeaderHeight="10" sectionFooterHeight="10" id="Uoy-QB-olF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -574,48 +574,74 @@
                         <viewControllerLayoutGuide type="top" id="4XB-eR-WHq"/>
                         <viewControllerLayoutGuide type="bottom" id="BlC-FG-bJO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1yZ-C8-H3D">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <view key="view" contentMode="scaleToFill" id="1yZ-C8-H3D" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mot (ex: dictionary)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLB-Ty-kUL" customClass="CrowdDictionaryTextField">
-                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drr-kH-JJ1" customClass="CrowdDictionaryTextView">
-                                <rect key="frame" x="0.0" y="93" width="320" height="126"/>
+                                <rect key="frame" x="0.0" y="81" width="320" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tag (#mot #chose ...)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vav-8r-ZIp" customClass="CrowdDictionaryTextField">
-                                <rect key="frame" x="0.0" y="342" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="348" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gc-5R-MTd" customClass="CrowdDictionaryTextView">
-                                <rect key="frame" x="0.0" y="218" width="320" height="125"/>
+                                <rect key="frame" x="0.0" y="215" width="320" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="écrire une définition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-ry-exy">
-                                <rect key="frame" x="6" y="99" width="187" height="21"/>
+                                <rect key="frame" x="6" y="87" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="écrire un exemple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJX-9M-Xyl">
-                                <rect key="frame" x="6" y="223" width="168" height="21"/>
+                                <rect key="frame" x="6" y="220" width="168" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mot (ex: dictionary)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLB-Ty-kUL" customClass="CrowdDictionaryTextField">
+                                <rect key="frame" x="0.0" y="43" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-yp-iEz">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Word" id="1hQ-Z1-J0k"/>
+                                    <barButtonItem title="Definition" id="wgG-ax-Fwi"/>
+                                    <barButtonItem title="Exemple" id="vfF-BN-efy"/>
+                                    <barButtonItem title="#" id="gGM-Xv-cbX"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovA-dU-HpU">
+                                <rect key="frame" x="0.0" y="480" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="rSt-CR-F7y"/>
+                                    <barButtonItem style="plain" id="XdA-tQ-hdN">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="aCh-6r-7zY">
+                                            <rect key="frame" x="45" y="7" width="181" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem title="envoyer" id="4gX-yD-qou"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -630,31 +656,51 @@
                         <outlet property="okButton" destination="lHY-NO-R7R" id="JqE-3E-xOk"/>
                         <outlet property="tags" destination="Vav-8r-ZIp" id="yHX-Tc-qfF"/>
                         <outlet property="word" destination="xLB-Ty-kUL" id="NfE-AH-TFl"/>
-                        <segue destination="Kyy-Me-eO1" kind="push" identifier="send" id="s4z-bJ-fkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNO-tD-cwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="999"/>
+            <point key="canvasLocation" x="1817" y="551"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="DH9-Lt-gfs">
+        <!--Crowd Dictionary Add Definition For Word View Controller - Title-->
+        <scene sceneID="FS0-ua-YKr">
             <objects>
-                <viewController id="Kyy-Me-eO1" sceneMemberID="viewController">
+                <viewController id="6qT-qk-Svk" customClass="CrowdDictionaryAddDefinitionForWordViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wu4-TV-rrS"/>
-                        <viewControllerLayoutGuide type="bottom" id="64m-4W-scG"/>
+                        <viewControllerLayoutGuide type="top" id="UzP-7j-cgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="S6c-CJ-ggD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4PS-zE-mks">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <view key="view" contentMode="scaleToFill" id="TKc-wJ-Aeo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-le-1RN">
+                                <rect key="frame" x="0.0" y="65" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Mot" id="GJi-NL-0Ep"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="t9N-oz-cdt"/>
+                                    <barButtonItem title="Definition" id="fLc-uW-kXC"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Znw-gL-ydb"/>
+                                    <barButtonItem title="Exemple" id="ck7-9O-7xh"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sF1-sC-BPQ"/>
+                                    <barButtonItem title="Tags" id="gNr-wV-g6z"/>
+                                </items>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6IV-2p-Ydf"/>
+                    <navigationItem key="navigationItem" title="Title" id="RKY-oV-IPT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="yRW-Lj-ehY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="topToolbar" destination="dgy-le-1RN" id="h9b-gm-e3H"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qvn-4o-Rt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DF-Hu-DEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2328" y="988"/>
+            <point key="canvasLocation" x="2684" y="1531"/>
         </scene>
         <!--View Controller - MOI-->
         <scene sceneID="Lpg-SA-7Ml">
@@ -665,7 +711,7 @@
                         <viewControllerLayoutGuide type="bottom" id="82K-2G-VkZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iBn-cW-B5j">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -751,6 +797,25 @@
             </objects>
             <point key="canvasLocation" x="663" y="3018"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aug-ie-YrR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRH-ho-Km7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Oc9-vl-Lry"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JEv-P7-Ezt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6qT-qk-Svk" kind="relationship" relationship="rootViewController" id="J1x-Ri-jCC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1z5-6V-7i4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="1109"/>
+        </scene>
     </scenes>
     <resources>
         <image name="glyphicons_003_user.png" width="23" height="22"/>
@@ -764,10 +829,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7v7-22-mPJ"/>
-        <segue reference="uLD-kU-dhv"/>
+        <segue reference="Raf-zW-eCf"/>
+        <segue reference="aWi-B1-OhU"/>
     </inferredMetricsTieBreakers>
 </document>

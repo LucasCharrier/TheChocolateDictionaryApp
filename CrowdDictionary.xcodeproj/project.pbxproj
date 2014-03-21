@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650B3EAC18DBAC330039D83B /* glyphicons_051_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EA818DBAC320039D83B /* glyphicons_051_eye_open.png */; };
+		650B3EAD18DBAC330039D83B /* glyphicons_051_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EA818DBAC320039D83B /* glyphicons_051_eye_open.png */; };
+		650B3EAE18DBAC330039D83B /* glyphicons_071_book.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EA918DBAC320039D83B /* glyphicons_071_book.png */; };
+		650B3EAF18DBAC330039D83B /* glyphicons_071_book.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EA918DBAC320039D83B /* glyphicons_071_book.png */; };
+		650B3EB018DBAC330039D83B /* glyphicons_072_bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EAA18DBAC320039D83B /* glyphicons_072_bookmark.png */; };
+		650B3EB118DBAC330039D83B /* glyphicons_072_bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EAA18DBAC320039D83B /* glyphicons_072_bookmark.png */; };
+		650B3EB218DBAC330039D83B /* glyphicons_150_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EAB18DBAC330039D83B /* glyphicons_150_edit.png */; };
+		650B3EB318DBAC330039D83B /* glyphicons_150_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EAB18DBAC330039D83B /* glyphicons_150_edit.png */; };
+		650B3EB618DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EB518DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m */; };
+		650B3EB718DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EB518DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m */; };
+		650B3EBE18DBE1C80039D83B /* BHExpandingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EB918DBE1C80039D83B /* BHExpandingTextView.m */; };
+		650B3EBF18DBE1C80039D83B /* BHExpandingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EB918DBE1C80039D83B /* BHExpandingTextView.m */; };
+		650B3EC018DBE1C80039D83B /* BHExpandingTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EBB18DBE1C80039D83B /* BHExpandingTextViewInternal.m */; };
+		650B3EC118DBE1C80039D83B /* BHExpandingTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EBB18DBE1C80039D83B /* BHExpandingTextViewInternal.m */; };
+		650B3EC218DBE1C80039D83B /* BHInputToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EBD18DBE1C80039D83B /* BHInputToolbar.m */; };
+		650B3EC318DBE1C80039D83B /* BHInputToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EBD18DBE1C80039D83B /* BHInputToolbar.m */; };
+		650B3EC518DBE6B30039D83B /* buttonbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EC418DBE6B30039D83B /* buttonbg.png */; };
+		650B3EC618DBE6B30039D83B /* buttonbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EC418DBE6B30039D83B /* buttonbg.png */; };
 		6510593918D0F138001A555A /* CrowdDictionaryTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593818D0F138001A555A /* CrowdDictionaryTextView.m */; };
 		6510593A18D0F138001A555A /* CrowdDictionaryTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593818D0F138001A555A /* CrowdDictionaryTextView.m */; };
 		6510593C18D0F3C1001A555A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6510593B18D0F3C1001A555A /* QuartzCore.framework */; };
@@ -75,6 +93,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650B3EA818DBAC320039D83B /* glyphicons_051_eye_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_051_eye_open.png; path = ../../../../glyphicons_free/glyphicons/png/glyphicons_051_eye_open.png; sourceTree = "<group>"; };
+		650B3EA918DBAC320039D83B /* glyphicons_071_book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_071_book.png; path = ../../../../glyphicons_free/glyphicons/png/glyphicons_071_book.png; sourceTree = "<group>"; };
+		650B3EAA18DBAC320039D83B /* glyphicons_072_bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_072_bookmark.png; path = ../../../../glyphicons_free/glyphicons/png/glyphicons_072_bookmark.png; sourceTree = "<group>"; };
+		650B3EAB18DBAC330039D83B /* glyphicons_150_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_150_edit.png; path = ../../../../glyphicons_free/glyphicons/png/glyphicons_150_edit.png; sourceTree = "<group>"; };
+		650B3EB418DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHInputToolbarSampleAppDelegate.h; sourceTree = "<group>"; };
+		650B3EB518DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHInputToolbarSampleAppDelegate.m; sourceTree = "<group>"; };
+		650B3EB818DBE1C80039D83B /* BHExpandingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHExpandingTextView.h; sourceTree = "<group>"; };
+		650B3EB918DBE1C80039D83B /* BHExpandingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHExpandingTextView.m; sourceTree = "<group>"; };
+		650B3EBA18DBE1C80039D83B /* BHExpandingTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHExpandingTextViewInternal.h; sourceTree = "<group>"; };
+		650B3EBB18DBE1C80039D83B /* BHExpandingTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHExpandingTextViewInternal.m; sourceTree = "<group>"; };
+		650B3EBC18DBE1C80039D83B /* BHInputToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHInputToolbar.h; sourceTree = "<group>"; };
+		650B3EBD18DBE1C80039D83B /* BHInputToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHInputToolbar.m; sourceTree = "<group>"; };
+		650B3EC418DBE6B30039D83B /* buttonbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonbg.png; sourceTree = "<group>"; };
 		6510593718D0F137001A555A /* CrowdDictionaryTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryTextView.h; path = ../CrowdDictionaryTextView.h; sourceTree = "<group>"; };
 		6510593818D0F138001A555A /* CrowdDictionaryTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryTextView.m; path = ../CrowdDictionaryTextView.m; sourceTree = "<group>"; };
 		6510593B18D0F3C1001A555A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -336,6 +367,14 @@
 		65797EC018C6AECF0052CAD6 /* Add Definition For Word */ = {
 			isa = PBXGroup;
 			children = (
+				650B3EB818DBE1C80039D83B /* BHExpandingTextView.h */,
+				650B3EB918DBE1C80039D83B /* BHExpandingTextView.m */,
+				650B3EBA18DBE1C80039D83B /* BHExpandingTextViewInternal.h */,
+				650B3EBB18DBE1C80039D83B /* BHExpandingTextViewInternal.m */,
+				650B3EBC18DBE1C80039D83B /* BHInputToolbar.h */,
+				650B3EBD18DBE1C80039D83B /* BHInputToolbar.m */,
+				650B3EB418DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.h */,
+				650B3EB518DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m */,
 				65797EC118C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.h */,
 				65797EC218C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.m */,
 			);
@@ -354,6 +393,11 @@
 		65E14D4E18A29AF900E10F33 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				650B3EC418DBE6B30039D83B /* buttonbg.png */,
+				650B3EA818DBAC320039D83B /* glyphicons_051_eye_open.png */,
+				650B3EA918DBAC320039D83B /* glyphicons_071_book.png */,
+				650B3EAA18DBAC320039D83B /* glyphicons_072_bookmark.png */,
+				650B3EAB18DBAC330039D83B /* glyphicons_150_edit.png */,
 				652C8F2118D8B58E0060BEEA /* glyphicons_050_link.png */,
 				6567366018BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png */,
 				6567366118BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png */,
@@ -457,11 +501,14 @@
 				652DAC3318A1CA0700287F15 /* Main_iPad.storyboard in Resources */,
 				6567366818BFF89700BBE3A2 /* glyphicons_345_hand_right.png in Resources */,
 				652DAC3B18A1CA0700287F15 /* Images.xcassets in Resources */,
+				650B3EB018DBAC330039D83B /* glyphicons_072_bookmark.png in Resources */,
 				65E14D6218A29B7100E10F33 /* glyphicons_020_home.png in Resources */,
 				65E14D5F18A29AF900E10F33 /* glyphicons_066_tags.png in Resources */,
 				65E14D5A18A29AF900E10F33 /* glyphicons_030_pencil.png in Resources */,
 				65E14D6418A29CF200E10F33 /* glyphicons_083_random.png in Resources */,
 				652DAC3018A1CA0700287F15 /* Main_iPhone.storyboard in Resources */,
+				650B3EAC18DBAC330039D83B /* glyphicons_051_eye_open.png in Resources */,
+				650B3EB218DBAC330039D83B /* glyphicons_150_edit.png in Resources */,
 				65E14D5818A29AF900E10F33 /* glyphicons_003_user.png in Resources */,
 				65E14D5B18A29AF900E10F33 /* glyphicons_048_dislikes - copie.png in Resources */,
 				65E14D6018A29AF900E10F33 /* glyphicons_347_hand_up.png in Resources */,
@@ -469,7 +516,9 @@
 				65E14D5918A29AF900E10F33 /* glyphicons_027_search.png in Resources */,
 				65E14D5C18A29AF900E10F33 /* glyphicons_049_star - copie.png in Resources */,
 				6567366618BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */,
+				650B3EC518DBE6B30039D83B /* buttonbg.png in Resources */,
 				6567366418BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */,
+				650B3EAE18DBAC330039D83B /* glyphicons_071_book.png in Resources */,
 				65E14D5E18A29AF900E10F33 /* glyphicons_065_tag.png in Resources */,
 				652C8F2218D8B58E0060BEEA /* glyphicons_050_link.png in Resources */,
 			);
@@ -479,10 +528,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650B3EC618DBE6B30039D83B /* buttonbg.png in Resources */,
 				6567366B18BFF89700BBE3A2 /* glyphicons_346_hand_left.png in Resources */,
+				650B3EAF18DBAC330039D83B /* glyphicons_071_book.png in Resources */,
 				6567366518BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */,
+				650B3EB118DBAC330039D83B /* glyphicons_072_bookmark.png in Resources */,
 				652DAC4C18A1CA0700287F15 /* InfoPlist.strings in Resources */,
 				6567366918BFF89700BBE3A2 /* glyphicons_345_hand_right.png in Resources */,
+				650B3EB318DBAC330039D83B /* glyphicons_150_edit.png in Resources */,
+				650B3EAD18DBAC330039D83B /* glyphicons_051_eye_open.png in Resources */,
 				6567366718BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,15 +548,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650B3EBE18DBE1C80039D83B /* BHExpandingTextView.m in Sources */,
 				6567365618BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */,
 				6567366E18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */,
 				658AD6BC18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */,
 				652DAC2D18A1CA0700287F15 /* CrowdDictionaryAppDelegate.m in Sources */,
 				6544FF2C18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 				6510593F18D0F659001A555A /* CrowdDictionaryTextField.m in Sources */,
+				650B3EC018DBE1C80039D83B /* BHExpandingTextViewInternal.m in Sources */,
+				650B3EC218DBE1C80039D83B /* BHInputToolbar.m in Sources */,
 				6510593918D0F138001A555A /* CrowdDictionaryTextView.m in Sources */,
 				65797EC318C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.m in Sources */,
 				6567364F18BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
+				650B3EB618DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m in Sources */,
 				6590CF1118B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC2918A1CA0700287F15 /* main.m in Sources */,
 				6567365B18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
@@ -514,7 +572,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6567365C18BF95EE00BBE3A2 /* CrowdDictionaryDefinitionsForUserViewController.m in Sources */,
+				650B3EC118DBE1C80039D83B /* BHExpandingTextViewInternal.m in Sources */,
 				6567365018BF949E00BBE3A2 /* CrowdDictionaryMostRecentDefinitionsViewController.m in Sources */,
+				650B3EBF18DBE1C80039D83B /* BHExpandingTextView.m in Sources */,
 				6590CF1218B2A8AE0001CC9E /* CrowdDictionaryRandomDefinition.m in Sources */,
 				652DAC4E18A1CA0700287F15 /* CrowdDictionaryTests.m in Sources */,
 				6567366F18BFFAC600BBE3A2 /* CrowdDictionaryTableViewCell.m in Sources */,
@@ -522,6 +582,8 @@
 				6567365718BF94F100BBE3A2 /* CrowdDictionaryMostPopularDefinitionViewController.m in Sources */,
 				6544FF2D18AD875E00F7D420 /* CrowdDictionaryWebAPI.m in Sources */,
 				658AD6BD18C386620021B48A /* CrowdDictionaryDefinitionsForWordViewController.m in Sources */,
+				650B3EB718DBE0E20039D83B /* BHInputToolbarSampleAppDelegate.m in Sources */,
+				650B3EC318DBE1C80039D83B /* BHInputToolbar.m in Sources */,
 				65797EC418C6AF580052CAD6 /* CrowdDictionaryAddDefinitionForWordViewController.m in Sources */,
 				6510594018D0F659001A555A /* CrowdDictionaryTextField.m in Sources */,
 			);
