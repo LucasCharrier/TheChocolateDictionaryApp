@@ -23,8 +23,10 @@
 		650B3EC118DBE1C80039D83B /* BHExpandingTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EBB18DBE1C80039D83B /* BHExpandingTextViewInternal.m */; };
 		650B3EC218DBE1C80039D83B /* BHInputToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EBD18DBE1C80039D83B /* BHInputToolbar.m */; };
 		650B3EC318DBE1C80039D83B /* BHInputToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B3EBD18DBE1C80039D83B /* BHInputToolbar.m */; };
-		650B3EC518DBE6B30039D83B /* buttonbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EC418DBE6B30039D83B /* buttonbg.png */; };
-		650B3EC618DBE6B30039D83B /* buttonbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EC418DBE6B30039D83B /* buttonbg.png */; };
+		650B3EC818DBF1BC0039D83B /* glyphicons_206_ok_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EC718DBF1BC0039D83B /* glyphicons_206_ok_2.png */; };
+		650B3EC918DBF1BC0039D83B /* glyphicons_206_ok_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3EC718DBF1BC0039D83B /* glyphicons_206_ok_2.png */; };
+		650B3ECB18DC69E60039D83B /* glyphicons_062_paperclip.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3ECA18DC69E60039D83B /* glyphicons_062_paperclip.png */; };
+		650B3ECC18DC69E60039D83B /* glyphicons_062_paperclip.png in Resources */ = {isa = PBXBuildFile; fileRef = 650B3ECA18DC69E60039D83B /* glyphicons_062_paperclip.png */; };
 		6510593918D0F138001A555A /* CrowdDictionaryTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593818D0F138001A555A /* CrowdDictionaryTextView.m */; };
 		6510593A18D0F138001A555A /* CrowdDictionaryTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6510593818D0F138001A555A /* CrowdDictionaryTextView.m */; };
 		6510593C18D0F3C1001A555A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6510593B18D0F3C1001A555A /* QuartzCore.framework */; };
@@ -105,7 +107,8 @@
 		650B3EBB18DBE1C80039D83B /* BHExpandingTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHExpandingTextViewInternal.m; sourceTree = "<group>"; };
 		650B3EBC18DBE1C80039D83B /* BHInputToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHInputToolbar.h; sourceTree = "<group>"; };
 		650B3EBD18DBE1C80039D83B /* BHInputToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHInputToolbar.m; sourceTree = "<group>"; };
-		650B3EC418DBE6B30039D83B /* buttonbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonbg.png; sourceTree = "<group>"; };
+		650B3EC718DBF1BC0039D83B /* glyphicons_206_ok_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_206_ok_2.png; sourceTree = "<group>"; };
+		650B3ECA18DC69E60039D83B /* glyphicons_062_paperclip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_062_paperclip.png; sourceTree = "<group>"; };
 		6510593718D0F137001A555A /* CrowdDictionaryTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowdDictionaryTextView.h; path = ../CrowdDictionaryTextView.h; sourceTree = "<group>"; };
 		6510593818D0F138001A555A /* CrowdDictionaryTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrowdDictionaryTextView.m; path = ../CrowdDictionaryTextView.m; sourceTree = "<group>"; };
 		6510593B18D0F3C1001A555A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -393,7 +396,8 @@
 		65E14D4E18A29AF900E10F33 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				650B3EC418DBE6B30039D83B /* buttonbg.png */,
+				650B3ECA18DC69E60039D83B /* glyphicons_062_paperclip.png */,
+				650B3EC718DBF1BC0039D83B /* glyphicons_206_ok_2.png */,
 				650B3EA818DBAC320039D83B /* glyphicons_051_eye_open.png */,
 				650B3EA918DBAC320039D83B /* glyphicons_071_book.png */,
 				650B3EAA18DBAC320039D83B /* glyphicons_072_bookmark.png */,
@@ -507,6 +511,8 @@
 				65E14D5A18A29AF900E10F33 /* glyphicons_030_pencil.png in Resources */,
 				65E14D6418A29CF200E10F33 /* glyphicons_083_random.png in Resources */,
 				652DAC3018A1CA0700287F15 /* Main_iPhone.storyboard in Resources */,
+				650B3ECB18DC69E60039D83B /* glyphicons_062_paperclip.png in Resources */,
+				650B3EC818DBF1BC0039D83B /* glyphicons_206_ok_2.png in Resources */,
 				650B3EAC18DBAC330039D83B /* glyphicons_051_eye_open.png in Resources */,
 				650B3EB218DBAC330039D83B /* glyphicons_150_edit.png in Resources */,
 				65E14D5818A29AF900E10F33 /* glyphicons_003_user.png in Resources */,
@@ -516,7 +522,6 @@
 				65E14D5918A29AF900E10F33 /* glyphicons_027_search.png in Resources */,
 				65E14D5C18A29AF900E10F33 /* glyphicons_049_star - copie.png in Resources */,
 				6567366618BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */,
-				650B3EC518DBE6B30039D83B /* buttonbg.png in Resources */,
 				6567366418BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */,
 				650B3EAE18DBAC330039D83B /* glyphicons_071_book.png in Resources */,
 				65E14D5E18A29AF900E10F33 /* glyphicons_065_tag.png in Resources */,
@@ -528,7 +533,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				650B3EC618DBE6B30039D83B /* buttonbg.png in Resources */,
 				6567366B18BFF89700BBE3A2 /* glyphicons_346_hand_left.png in Resources */,
 				650B3EAF18DBAC330039D83B /* glyphicons_071_book.png in Resources */,
 				6567366518BFF89700BBE3A2 /* glyphicons_343_thumbs_up.png in Resources */,
@@ -537,7 +541,9 @@
 				6567366918BFF89700BBE3A2 /* glyphicons_345_hand_right.png in Resources */,
 				650B3EB318DBAC330039D83B /* glyphicons_150_edit.png in Resources */,
 				650B3EAD18DBAC330039D83B /* glyphicons_051_eye_open.png in Resources */,
+				650B3EC918DBF1BC0039D83B /* glyphicons_206_ok_2.png in Resources */,
 				6567366718BFF89700BBE3A2 /* glyphicons_344_thumbs_down.png in Resources */,
+				650B3ECC18DC69E60039D83B /* glyphicons_062_paperclip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

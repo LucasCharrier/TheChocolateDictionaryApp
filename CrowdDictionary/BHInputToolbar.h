@@ -37,6 +37,7 @@
 
 @property (nonatomic, strong) BHExpandingTextView *textView;
 @property (nonatomic, strong) UIBarButtonItem *inputButton;
+@property (nonatomic, strong) UIBarButtonItem *optionButton;
 @property (nonatomic, weak) id<BHInputToolbarDelegate> inputDelegate;
 
 @end

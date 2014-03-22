@@ -41,8 +41,9 @@
 
 -(void)setupToolbar:(NSString *)buttonLabel
 {
-    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin;
-    self.tintColor = [UIColor darkTextColor];
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleHeight;
+    self.tintColor = [UIColor lightGrayColor];
+    self.backgroundColor = [UIColor lightGrayColor];
 
     /* Create custom send button*/
 
@@ -51,32 +52,58 @@
     button.titleLabel.font         = [UIFont boldSystemFontOfSize:15.0f];
     button.titleLabel.shadowOffset = CGSizeMake(0, -1);
     button.titleEdgeInsets         = UIEdgeInsetsMake(0, 2, 0, 2);
+    button.contentStretch          = CGRectMake(0.5, 0.5, 0, 0);
     button.contentMode             = UIViewContentModeScaleToFill;
+ 
 
    
-    [button setTitle:@"valider" forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"glyphicons_206_ok_2.png"]
+            forState:UIControlStateNormal];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(inputButtonPressed) forControlEvents:UIControlEventTouchDown];
     [button sizeToFit];
+    
+    UIButton *optionButton               = [UIButton buttonWithType:UIButtonTypeCustom];
+    optionButton.titleLabel.font         = [UIFont boldSystemFontOfSize:15.0f];
+    optionButton.titleLabel.shadowOffset = CGSizeMake(0, -1);
+    optionButton.titleEdgeInsets         = UIEdgeInsetsMake(0, 2, 0, 2);
 
+    optionButton.contentMode             = UIViewContentModeScaleToFill;
+    
+    [optionButton setImage:[UIImage imageNamed:@"glyphicons_062_paperclip.png"]
+            forState:UIControlStateNormal];
+    [optionButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [optionButton addTarget:self action:@selector(inputButtonPressed) forControlEvents:UIControlEventTouchDown];
+    [optionButton sizeToFit];
 
+    
     self.inputButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    self.inputButton.customView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+     self.inputButton.customView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     /* Disable button initially */
-    self.inputButton.enabled = YES;
+    self.inputButton.enabled = NO;
+    
+    self.optionButton = [[UIBarButtonItem alloc] initWithCustomView:optionButton];
+    self.optionButton.customView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    /* Disable button initially */
+    self.optionButton.enabled = NO;
 
     /* Create UIExpandingTextView input */
-    self.textView = [[BHExpandingTextView alloc] initWithFrame:CGRectMake(7, 7, self.bounds.size.width - 84, 26)];
+    self.textView = [[BHExpandingTextView alloc] initWithFrame:CGRectMake(54, 4, self.bounds.size.width - 104, 20)];
     self.textView.internalTextView.scrollIndicatorInsets = UIEdgeInsetsMake(4.0f, 0.0f, 10.0f, 0.0f);
     self.textView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
     self.textView.delegate = self;
+    [self.textView setBackgroundColor:[UIColor whiteColor]];
     [self addSubview:self.textView];
 
     /* Right align the toolbar button */
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    /*UIBarButtonItem* optionItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"glyphicons_062_paperclip.png"] style:UIBarButtonItemStyleBordered target:self action:nil];*/
 
-    NSArray *items = [NSArray arrayWithObjects: flexItem, self.inputButton, nil];
+    NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc]
+                                                initWithCustomView:optionButton],flexItem,self.inputButton, nil];
     [self setItems:items animated:NO];
+    
 }
 
 -(id)initWithFrame:(CGRect)frame
@@ -177,6 +204,23 @@
         [self.inputDelegate expandingTextView:expandingTextView didChangeHeight:height];
     }
 }
+
+
+- (void)drawRect:(CGRect)rect
+{
+    
+    /* Draw custon toolbar background */
+    
+    CGRect input = self.inputButton.customView.frame;
+    input.origin.y = self.frame.size.height - input.size.height - 15;
+    self.inputButton.customView.frame = input;
+    
+    CGRect option = self.optionButton.customView.frame;
+    option.origin.y = self.frame.size.height - option.size.height - 12;
+    self.optionButton.customView.frame = option;
+}
+
+
 
 - (void)expandingTextViewDidChangeSelection:(BHExpandingTextView *)expandingTextView
 {

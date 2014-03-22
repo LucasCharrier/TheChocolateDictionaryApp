@@ -49,7 +49,7 @@
     
     [[self.bottomToolbar.textView layer] setBorderColor:[[UIColor grayColor] CGColor]];
     [[self.bottomToolbar.textView layer] setBorderWidth:1.0];
-    [[self.bottomToolbar.textView layer] setCornerRadius:15];
+    [[self.bottomToolbar.textView layer] setCornerRadius:5];
    
     [self.navigationItem.rightBarButtonItem setTitle:@"+ Publier"];
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithWhite: 1 alpha:0.60]];

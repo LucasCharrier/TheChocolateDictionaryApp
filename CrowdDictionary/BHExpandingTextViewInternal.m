@@ -25,8 +25,8 @@
 
 #import "BHExpandingTextViewInternal.h"
 
-#define kTopContentInset -4
-#define lBottonContentInset 12
+#define kTopContentInset 0
+#define lBottonContentInset 0
 
 @implementation BHExpandingTextViewInternal
 

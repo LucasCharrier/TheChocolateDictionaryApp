@@ -100,7 +100,7 @@
 		[self setMinimumNumberOfLines:1];
 		self.animateHeightChange = YES;
 		self.internalTextView.text = @"";
-		[self setMaximumNumberOfLines:13];
+		[self setMaximumNumberOfLines:3];
 
         [self sizeToFit];
     }
@@ -490,31 +490,6 @@
     {
 		[self.delegate expandingTextViewDidEndEditing:self];
 	}
-}
-
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)atext
-{
-	if(![textView hasText] && [atext isEqualToString:@""])
-    {
-        return NO;
-	}
-
-	if ([atext isEqualToString:@"\n"])
-    {
-		if ([self.delegate respondsToSelector:@selector(expandingTextViewShouldReturn:)])
-        {
-			if (![self.delegate performSelector:@selector(expandingTextViewShouldReturn:) withObject:self])
-            {
-				return YES;
-			}
-            else
-            {
-				[textView resignFirstResponder];
-				return NO;
-			}
-		}
-	}
-	return YES;
 }
 
 - (void)textViewDidChangeSelection:(UITextView *)textView
